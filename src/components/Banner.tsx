@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <div className="bg-[#10172E]">
       <div>
-        <div className="flex border items-center">
+        <div className="flex items-center">
           <div className="flex-1 w-full mx-auto">
             <div className="max-w-180 w-full mx-auto">
               <h3 className="text-3xl font-bold text-[#10172E] mb-4 text-white">
