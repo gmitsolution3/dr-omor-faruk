@@ -1,4 +1,3 @@
-import React from "react";
 import { ArrowRight, Check } from "lucide-react";
 import FacialImage from "@/assets/facial.jpg";
 import MakeupImage from "@/assets/makeup.jpg";
