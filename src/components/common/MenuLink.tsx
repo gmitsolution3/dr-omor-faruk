@@ -1,5 +1,5 @@
 import type { ReactNode } from "React";
-import { Link } from "react-router";
+// import { Link } from "react-router";
 import { cn } from "@/lib/utils";
 import { useLocation } from "react-router";
 
@@ -21,13 +21,13 @@ const MenuLink = ({
   const active = "text-[#6C234C]";
 
   return (
-    <Link
-      to={to}
+    <a
+      href={`#${to}`}
       className={cn(className, `${pathname === to ? active : ""}`)}
       onClick={onClick}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 

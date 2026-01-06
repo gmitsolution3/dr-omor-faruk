@@ -32,7 +32,7 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-[#0f1621]">
+    <section id="faq" className="py-12 md:py-16 lg:py-20 bg-[#0f1621]">
       <div className="container mx-auto px-4 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Content */}

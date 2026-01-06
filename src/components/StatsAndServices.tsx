@@ -49,7 +49,7 @@ export default function StatsAndServicesSection() {
   ];
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section id="gallery" className="py-12 md:py-16 lg:py-20 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-0">
         {/* Stats Section */}
         <div className="bg-white rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-8 lg:p-10 mb-12 md:mb-16 lg:mb-20">

@@ -6,7 +6,7 @@ import TypingText from "@/components/ui/typing-text";
 
 export default function Banner() {
   return (
-    <div className="bg-[#10172E] py-12 lg:py-0">
+    <div id="banner" className="bg-[#10172E] py-12 lg:py-0">
       <div className="mx-auto px-5 lg:px-0">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-0">
           {/* Content Section */}

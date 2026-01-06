@@ -2,7 +2,7 @@ import { Phone } from "lucide-react";
 
 export default function CallToAction() {
   return (
-    <section className="bg-[#1a2332] py-12 md:py-16 lg:py-20">
+    <section id="contact" className="bg-[#1a2332] py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
           {/* Left side - Text */}

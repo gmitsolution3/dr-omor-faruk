@@ -126,4 +126,5 @@
 
 * {
   font-family: "Noto Sans Bengali", sans-serif;
+  scroll-behavior: smooth;
 }

@@ -71,7 +71,7 @@ export default function Header() {
             <ul className="flex items-center justify-start space-x-8 uppercase">
               <li>
                 <MenuLink
-                  to="/"
+                  to="banner"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Home
@@ -79,7 +79,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/about"
+                  to="banner"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   About
@@ -87,7 +87,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/services"
+                  to="services"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Services
@@ -95,7 +95,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/faq"
+                  to="faq"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   FAQ
@@ -103,7 +103,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/blog"
+                  to="blog"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Blog
@@ -111,7 +111,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/gallery"
+                  to="gallery"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Gallery
@@ -119,7 +119,7 @@ export default function Header() {
               </li>
               <li>
                 <MenuLink
-                  to="/contact"
+                  to="contact"
                   className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Contact
