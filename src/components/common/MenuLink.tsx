@@ -7,9 +7,15 @@ interface IMenuLink {
   to: string;
   className: string;
   children: ReactNode;
+  onClick?: () => void;
 }
 
-const MenuLink = ({ to, className, children }: IMenuLink) => {
+const MenuLink = ({
+  to,
+  className,
+  children,
+  onClick,
+}: IMenuLink) => {
   const { pathname } = useLocation();
 
   const active = "text-[#6C234C]";
@@ -18,6 +24,7 @@ const MenuLink = ({ to, className, children }: IMenuLink) => {
     <Link
       to={to}
       className={cn(className, `${pathname === to ? active : ""}`)}
+      onClick={onClick}
     >
       {children}
     </Link>
