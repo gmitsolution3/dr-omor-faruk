@@ -58,7 +58,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <Button
               variant="primary"
-              className="bg-[#6C234C] hover:bg-[#10172E] transition-colors"
+              className="bg-[#6C234C] hover:bg-[#10172E]"
             >
               অ্যাপয়েন্টমেন্ট বুক করুন
             </Button>

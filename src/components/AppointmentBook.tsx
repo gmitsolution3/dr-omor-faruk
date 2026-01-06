@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "./ui/button";
 
 export default function AppointmentBook() {
   const [formData, setFormData] = useState({
@@ -22,16 +23,16 @@ export default function AppointmentBook() {
   };
 
   return (
-    <div className="bg-[#423D96] flex items-center justify-center px-4 py-[150px]">
+    <div className="bg-[#423D96] flex items-center justify-center px-4 py-12 md:py-20 lg:py-[150px]">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="text-white space-y-6">
-            <h3 className="text-4xl md:text-5xl font-bold mb-8">
+          <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-8">
               অ্যাপয়েন্টমেন্ট বুক করুন
             </h3>
 
-            <div className="space-y-4 text-lg">
+            <div className="space-y-3 lg:space-y-4 text-base font-light md:text-lg">
               <p>
                 আপনি তুক, এনাজি, যৌনশক্তি বা সৌন্দর্যের মত নিয়ে
                 চিন্তিত?
@@ -52,9 +53,12 @@ export default function AppointmentBook() {
           </div>
 
           {/* Right side - Form */}
-          <div className="bg-white rounded-lg shadow-xl p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-white rounded-lg shadow-xl p-6 md:p-8">
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-4 md:space-y-6"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <input
                     type="text"
@@ -62,7 +66,7 @@ export default function AppointmentBook() {
                     placeholder="আপনার নাম"
                     value={formData.customerName}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-sm md:text-base"
                   />
                 </div>
 
@@ -73,18 +77,18 @@ export default function AppointmentBook() {
                     placeholder="ফোন নাম্বার"
                     value={formData.phoneNumber}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-sm md:text-base"
                   />
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <select
                     name="serviceLocation"
                     value={formData.serviceLocation}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-gray-700"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-gray-700 text-sm md:text-base"
                   >
                     <option value="">সিলেক্ট লোকেশন</option>
                     <option value="dhaka">ঢাকা</option>
@@ -102,18 +106,18 @@ export default function AppointmentBook() {
                     placeholder="ঠিকানা"
                     value={formData.address}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-sm md:text-base"
                   />
                 </div>
               </div>
 
-              <div className="flex justify-center pt-4">
-                <button
-                  type="submit"
-                  className="bg-[#4285f4] text-white rounded-t-2xl py-3 px-6 hover:bg-[#10172E] transition-colors flex items-center gap-2"
+              <div className="flex justify-center pt-2 md:pt-4">
+                <Button
+                  variant="primary"
+                  className="bg-[#4285f4] hover:bg-[#10172E]"
                 >
                   সাবমিট করুন
-                </button>
+                </Button>
               </div>
             </form>
           </div>
