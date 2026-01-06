@@ -174,10 +174,16 @@ export default function Header() {
               </div>
 
               <Button
+                asChild
                 variant="primary"
-                className="w-full bg-[#6C234C] hover:bg-[#10172E] transition-colors"
+                className="bg-[#6C234C] hover:bg-[#10172E]"
               >
-                অ্যাপয়েন্টমেন্ট বুক করুন
+                <a
+                  href="https://forms.gle/hRaBxfPtMFmPVXuW8"
+                  target="_blank"
+                >
+                  অ্যাপয়েন্টমেন্ট বুক করুন
+                </a>
               </Button>
             </div>
           </nav>
