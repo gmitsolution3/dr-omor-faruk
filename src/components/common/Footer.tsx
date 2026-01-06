@@ -21,21 +21,21 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a2332] text-white">
+    <footer className="bg-[#10172E] text-white">
       {/* Newsletter Section */}
       <div className="border-b border-gray-700">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left - Icon and Text */}
             <div className="flex items-center gap-6">
-              <div className="bg-[#8B4F7C] rounded-2xl p-6 flex-shrink-0">
-                <Mail size={40} />
+              <div className="bg-[#6C234C] rounded-t-2xl p-4 flex-shrink-0">
+                <Mail size={35} />
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-2">
+                <h3 className="text-2xl font-medium mb-2">
                   নিউজলেটার সাবস্ক্রাইব করুন
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-400 max-w-100">
                   এগামে তুক ও যৌনস্বাস্থ্য সচেতনতামূলক মূলক নানা রকম
                   বিষয় নিয়ে আর্টিকেল পাবলিস করা হবা।
                 </p>
@@ -52,12 +52,12 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="আপনার ইমেইল অ্যাড্রেস দিন"
-                className="flex-1 md:w-80 px-6 py-4 rounded-l-xl bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#8B4F7C]"
+                className="flex-1 md:w-80 px-6 py-4 rounded-l-xl bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#6C234C]"
                 required
               />
               <button
                 type="submit"
-                className="bg-[#8B4F7C] hover:bg-[#6B3F6C] transition-colors px-8 py-4 rounded-r-xl font-semibold whitespace-nowrap"
+                className="bg-[#6C234C] hover:bg-[#6C234C] transition-colors px-8 py-4 rounded-r-xl font-semibold whitespace-nowrap"
               >
                 সাবস্ক্রাইব
               </button>
@@ -195,7 +195,7 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>Design & Developed By ClickNup</p>
+            <p>Design & Developed By GM IT</p>
             <p>
               Copyright © 2025 Dr. Chowdhury Farhana Tinnee All rights
               reserved.
