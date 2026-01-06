@@ -5,6 +5,37 @@ import HeaderSideMenu from "./HeaderSideMenu";
 import { Button } from "../ui/button";
 import { useState } from "react";
 
+const navItems = [
+  {
+    to: "banner",
+    name: "Home",
+  },
+  {
+    to: "banner",
+    name: "About",
+  },
+  {
+    to: "services",
+    name: "Services",
+  },
+  {
+    to: "faq",
+    name: "Faq",
+  },
+  {
+    to: "blog",
+    name: "Blog",
+  },
+  {
+    to: "gallery",
+    name: "Gallery",
+  },
+  {
+    to: "contact",
+    name: "Contact",
+  },
+];
+
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -69,62 +100,16 @@ export default function Header() {
         <nav className="hidden lg:block mt-8 border-t border-[#EAEAEA] pt-6">
           <div className="flex items-center justify-between">
             <ul className="flex items-center justify-start space-x-8 uppercase">
-              <li>
-                <MenuLink
-                  to="banner"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  Home
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="banner"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  About
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="services"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  Services
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="faq"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  FAQ
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="blog"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  Blog
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="gallery"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  Gallery
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="contact"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
-                >
-                  Contact
-                </MenuLink>
-              </li>
+              {navItems.map((item) => (
+                <li>
+                  <MenuLink
+                    to={item.to}
+                    className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
+                  >
+                    {item.name}
+                  </MenuLink>
+                </li>
+              ))}
             </ul>
 
             <div>
@@ -137,69 +122,17 @@ export default function Header() {
         {isMobileMenuOpen && (
           <nav className="lg:hidden mt-4 border-t border-[#EAEAEA] pt-4">
             <ul className="space-y-3">
-              <li>
-                <MenuLink
-                  to="/"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Home
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/about"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  About
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/services"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Services
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/faq"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  FAQ
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/blog"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Blog
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/gallery"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Gallery
-                </MenuLink>
-              </li>
-              <li>
-                <MenuLink
-                  to="/contact"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Contact
-                </MenuLink>
-              </li>
+              {navItems.map((item) => (
+                <li>
+                  <MenuLink
+                    to={item.to}
+                    className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.name}
+                  </MenuLink>
+                </li>
+              ))}
             </ul>
 
             {/* Mobile Contact Info */}
