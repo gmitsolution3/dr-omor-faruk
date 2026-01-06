@@ -1,14 +1,7 @@
 import { Link } from "react-router";
 import { MapPin, Phone, Menu, X } from "lucide-react";
 import MenuLink from "./MenuLink";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import HeaderSideMenu from "./HeaderSideMenu";
 import { Button } from "../ui/button";
 import { useState } from "react";
 
@@ -25,13 +18,17 @@ export default function Header() {
             <Link to="/" className="font-bold text-xl lg:text-2xl">
               Dr. SK Serjina Anwar
             </Link>
-            
+
             {/* Mobile Menu Toggle */}
             <button
               className="lg:hidden p-2"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? (
+                <X size={24} />
+              ) : (
+                <Menu size={24} />
+              )}
             </button>
           </div>
 
@@ -75,7 +72,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Home
                 </MenuLink>
@@ -83,7 +80,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/about"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   About
                 </MenuLink>
@@ -91,7 +88,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/services"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Services
                 </MenuLink>
@@ -99,7 +96,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/faq"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   FAQ
                 </MenuLink>
@@ -107,7 +104,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/blog"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Blog
                 </MenuLink>
@@ -115,7 +112,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/gallery"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Gallery
                 </MenuLink>
@@ -123,7 +120,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/contact"
-                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors"
+                  className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
                 >
                   Contact
                 </MenuLink>
@@ -131,61 +128,7 @@ export default function Header() {
             </ul>
 
             <div>
-              <Sheet>
-                <SheetTrigger>
-                  <Menu />
-                </SheetTrigger>
-                <SheetContent className="bg-[#10172E] text-white border-l-0">
-                  <SheetHeader>
-                    <SheetTitle className="text-white">
-                      কন্টাক্ট ডিটেইলস
-                      <p className="mt-5 font-normal">ডার্মাটোসার্জন</p>
-                    </SheetTitle>
-                    <SheetDescription>
-                      <div className="space-y-4 mt-4">
-                        <div>
-                          <h3 className="font-bold mb-2 text-white">
-                            পপুলার ডায়াগনস্টিক সেন্টার
-                          </h3>
-                          <p className="text-sm text-gray-300">
-                            রুম নং: ৫১৩ বি ব্লক, ২০/বি, কে.বি. ফজলুল
-                            কাদের রোড, পাঁচলাইশ, চট্টগ্রাম।
-                          </p>
-                          <p className="text-xs text-gray-400 mt-1">
-                            (চট্টগ্রাম মেডিকেল কলেজ ও হাসপাতালের পূর্ব
-                            গেইটের পাশে)
-                          </p>
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-[#423D96] mb-2">
-                            Surecell Medical, Chattogram
-                          </h3>
-                          <p className="text-sm text-gray-300">
-                            আল-নূর বদরুন সেন্টার (৪র্থ তলা) ১৪৮৬-১৬৭২,
-                            ও.আর. নিজাম রোড প্রবর্তক মোড়, চট্টগ্রাম।
-                          </p>
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-[#423D96] mb-2">
-                            ফোন
-                          </h3>
-                          <p className="text-sm text-gray-300">
-                            01974-896998
-                          </p>
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-[#423D96] mb-2">
-                            সময়
-                          </h3>
-                          <p className="text-sm text-gray-300">
-                            প্রতিদিন বিকাল ৪টা থেকে সন্ধ্যা ৭টা পর্যন্ত
-                          </p>
-                        </div>
-                      </div>
-                    </SheetDescription>
-                  </SheetHeader>
-                </SheetContent>
-              </Sheet>
+              <HeaderSideMenu />
             </div>
           </div>
         </nav>
@@ -197,7 +140,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
@@ -206,7 +149,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/about"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
@@ -215,7 +158,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/services"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Services
@@ -224,7 +167,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/faq"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   FAQ
@@ -233,7 +176,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/blog"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Blog
@@ -242,7 +185,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/gallery"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Gallery
@@ -251,7 +194,7 @@ export default function Header() {
               <li>
                 <MenuLink
                   to="/contact"
-                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2"
+                  className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
@@ -278,8 +221,12 @@ export default function Header() {
                   <Phone size={20} />
                 </span>
                 <div>
-                  <h3 className="font-medium text-sm">সিরিয়ালের জন্য</h3>
-                  <p className="text-[#525766] text-xs">01893730341</p>
+                  <h3 className="font-medium text-sm">
+                    সিরিয়ালের জন্য
+                  </h3>
+                  <p className="text-[#525766] text-xs">
+                    01893730341
+                  </p>
                 </div>
               </div>
 
