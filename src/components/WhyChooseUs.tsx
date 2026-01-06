@@ -7,23 +7,27 @@ export default function WhyChooseUsSection() {
       icon: <Syringe size={48} className="text-yellow-400" />,
       title: "উন্নত প্রযুক্তি",
       bgColor: "bg-gradient-to-br from-[#6C234C] to-[#4a1835]",
+      rounded: "rounded-tl-[40px]",
     },
     {
       icon: <Award size={48} className="text-yellow-400" />,
       title: "সন্তুষ্টির নিশ্চয়তা",
       bgColor: "bg-[#1a2332]",
       border: true,
+      rounded: "rounded-tr-[40px]",
     },
     {
       icon: <UserCircle size={48} className="text-yellow-400" />,
       title: "পেশাদার চিকিৎসক",
       bgColor: "bg-[#1a2332]",
       border: true,
+      rounded: "rounded-bl-[40px]",
     },
     {
       icon: <Hand size={48} className="text-yellow-400" />,
       title: "নিশ্চিত সুরক্ষা সেবা",
       bgColor: "bg-gradient-to-br from-[#6C234C] to-[#4a1835]",
+      rounded: "rounded-br-[40px]",
     },
   ];
 
@@ -57,14 +61,15 @@ export default function WhyChooseUsSection() {
           </div>
 
           {/* Right side - Features Grid */}
-          <div className="grid grid-cols-2 gap-3 md:gap-4">
+          <div className="grid grid-cols-2 gap-3 md:gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
                 className={`
                   ${feature.bgColor} 
+                  ${feature.rounded}
                   ${feature.border ? "border-2 border-gray-700" : ""} 
-                  rounded-xl md:rounded-2xl p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 min-h-[160px] md:min-h-[200px] hover:scale-105 transition-transform
+                  p-6 md:p-8 flex flex-col items-center justify-center text-center space-y-3 md:space-y-4 min-h-[160px] md:min-h-[200px] hover:scale-105 transition-transform
                 `}
               >
                 <div className="flex items-center justify-center">

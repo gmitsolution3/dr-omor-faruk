@@ -3,26 +3,27 @@ import FacePRCImage from "@/assets/faceprc.jpg";
 import HairPRCImage from "@/assets/hairprc.jpg";
 import Botox from "@/assets/botox.jpg";
 import Filler from "@/assets/filler.jpg";
+import { Button } from "./ui/button";
 
 export default function StatsAndServicesSection() {
   const stats = [
     {
-      icon: <Users size={48} className="text-[#8B4F7C]" />,
+      icon: <Users size={48} className="text-[#6C234C]" />,
       number: "2,200",
       label: "রোগীকে সেবা প্রদান",
     },
     {
-      icon: <Award size={48} className="text-[#8B4F7C]" />,
+      icon: <Award size={48} className="text-[#6C234C]" />,
       number: "8",
       label: "বছরের অভিজ্ঞতা",
     },
     {
-      icon: <Syringe size={48} className="text-[#8B4F7C]" />,
+      icon: <Syringe size={48} className="text-[#6C234C]" />,
       number: "700",
       label: "ডাক্তি সমসা সমাধান",
     },
     {
-      icon: <UserCheck size={48} className="text-[#8B4F7C]" />,
+      icon: <UserCheck size={48} className="text-[#6C234C]" />,
       number: "6",
       label: "প্রফেশনাল ট্রেনিং",
     },
@@ -48,20 +49,27 @@ export default function StatsAndServicesSection() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 lg:px-0">
         {/* Stats Section */}
-        <div className="bg-white rounded-3xl shadow-lg p-8 mb-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="bg-white rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-8 lg:p-10 mb-12 md:mb-16 lg:mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center space-y-4">
-                <div className="flex justify-center">{stat.icon}</div>
+              <div
+                key={index}
+                className="text-center space-y-3 md:space-y-4"
+              >
+                <div className="flex justify-center">
+                  <div className="scale-75 md:scale-90 lg:scale-100">
+                    {stat.icon}
+                  </div>
+                </div>
                 <div className="space-y-1">
-                  <h3 className="text-4xl md:text-5xl font-bold text-gray-900">
+                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                     {stat.number}
-                    <span className="text-[#8B4F7C]">+</span>
+                    <span className="text-[#6C234C]">+</span>
                   </h3>
-                  <p className="text-gray-600 text-sm md:text-base">
+                  <p className="text-gray-600 text-xs md:text-sm lg:text-base leading-snug">
                     {stat.label}
                   </p>
                 </div>
@@ -71,38 +79,41 @@ export default function StatsAndServicesSection() {
         </div>
 
         {/* Services Section */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {/* Header */}
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
             <div>
-              <p className="text-[#4285f4] font-medium mb-2">
+              <p className="text-[#4285f4] font-medium mb-2 text-sm md:text-base">
                 তুক ও যৌনস্বাস্থ্য
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
                 স্পেশালাইজড সার্ভিসেস
               </h2>
             </div>
-            <button className="bg-[#8B4F7C] text-white rounded-lg py-3 px-6 hover:bg-[#6B3F6C] transition-colors font-medium">
+            <Button
+              variant="primary"
+              className="bg-[#6C234C] hover:bg-[#10172E]"
+            >
               সব সার্ভিসেস
-            </button>
+            </Button>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
+                className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"
               >
-                <div className="relative overflow-hidden h-64">
+                <div className="relative overflow-hidden h-48 md:h-56 lg:h-64">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 text-center">
+                <div className="p-4 md:p-6">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-900 text-center">
                     {service.title}
                   </h3>
                 </div>

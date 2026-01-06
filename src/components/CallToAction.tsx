@@ -2,33 +2,42 @@ import { Phone } from "lucide-react";
 
 export default function CallToAction() {
   return (
-    <section className="bg-[#1a2332] py-[70px]">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+    <section className="bg-[#1a2332] py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-4 lg:px-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
           {/* Left side - Text */}
-          <div className="text-white text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-semibold">
+          <div className="text-white text-center lg:text-left flex-1">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed">
               তুক ও যৌনস্বাস্থ্যের বিভিন্ন সমসা সমাধানের জন্য যোগায়োগ
               করুন
             </h2>
           </div>
 
           {/* Right side - CTA Buttons */}
-          <div className="flex flex-shrink-0 relative">
-            {/* Phone Button */}
-            <button className="bg-[#6C234C] rounded-tl-2xl py-3 px-6 hover:bg-[#6B3F6C] transition-colors flex items-center gap-3 font-medium h-15 text-white">
-              <Phone size={20} />
-              <span>+8801974-896998</span>
-            </button>
+          <div className="flex-shrink-0 w-full lg:w-auto">
+            <div className="relative flex items-stretch">
+              {/* Phone Button */}
+              <button className="bg-[#6C234C] text-white rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[#4a1835] transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
+                <Phone size={18} className="md:w-5 md:h-5" />
+                <span className="whitespace-nowrap">
+                  +8801974-896998
+                </span>
+              </button>
 
-            <span className="text-white text-white bg-[#10172E] absolute top-[10%] left-[50%] -translate-x-[90%] z-9 p-2 rounded-full text-[10px] size-10 text-center leading-[25px]">
-              অথবা
-            </span>
+              {/* "Or" Badge */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                <span className="bg-[#10172E] text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-xs md:text-sm font-medium shadow-lg border-2 border-[#1a2332]">
+                  অথবা
+                </span>
+              </div>
 
-            {/* WhatsApp Button */}
-            <button className="bg-[#F8F329] to-yellow-400 text-gray-900 rounded-tr-2xl py-3 px-6 hover:opacity-90 transition-opacity flex items-center gap-3 font-bold">
-              <span>অ্যাপয়েন্টমেন্ট বুক করুন</span>
-            </button>
+              {/* Appointment Button */}
+              <button className="bg-[#F8F329] text-gray-900 rounded-tr-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[#e6e024] transition-colors flex items-center justify-center gap-2 font-bold text-sm md:text-base flex-1 lg:flex-initial">
+                <span className="whitespace-nowrap">
+                  অ্যাপয়েন্টমেন্ট বুক করুন
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

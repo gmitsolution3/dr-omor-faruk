@@ -34,37 +34,37 @@ export default function BookingProcess() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12">
+    <section className="py-12 md:py-16 lg:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left side - Process Steps */}
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {/* Header */}
             <div className="space-y-3">
-              <p className="text-[#4285f4] font-medium">
+              <p className="text-[#423D96] font-medium text-sm md:text-base">
                 বুকিং সিস্টেম
               </p>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
                 মাত্র ৪টি সহজ পদক্ষেপ এর মাধ্যমে সেবা নিন
               </h2>
             </div>
 
             {/* Steps Grid */}
-            <div className="grid sm:grid-cols-2 gap-6 pt-4">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4">
               {steps.map((step, index) => (
-                <div key={index} className="space-y-4">
+                <div key={index} className="space-y-3 sm:space-y-4">
                   {/* Icon with number */}
                   <div className="relative inline-block">
-                    <div className="bg-[#8B4F7C] rounded-2xl p-6 inline-block">
+                    <div className="bg-[#6C234C] rounded-t-2xl p-4 sm:p-5 md:p-6 inline-block">
                       {step.icon}
                     </div>
-                    <div className="absolute -bottom-2 -right-2 bg-[#1a2332] text-white rounded-full w-12 h-12 flex items-center justify-center font-bold text-lg">
+                    <div className="absolute top-4 -right-8 bg-[#1a2332] text-white rounded-t-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-base sm:text-lg">
                       {step.number}
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+                  <h3 className="md:text-xl text-lg font-light text-gray-900 leading-snug max-w-52">
                     {step.title}
                   </h3>
                 </div>
@@ -73,17 +73,17 @@ export default function BookingProcess() {
           </div>
 
           {/* Right side - Images and Contact Card */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Top Images */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="rounded-3xl overflow-hidden shadow-lg">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="rounded-tl-2xl overflow-hidden aspect-square">
                 <img
                   src={TreatmentImage}
                   alt="Skin treatment"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="rounded-3xl overflow-hidden shadow-lg">
+              <div className="rounded-tr-2xl overflow-hidden aspect-square">
                 <img
                   src={FacialImage}
                   alt="Facial treatment"
@@ -93,16 +93,16 @@ export default function BookingProcess() {
             </div>
 
             {/* Contact Card */}
-            <div className="bg-[#1a2332] rounded-3xl p-8 text-white">
-              <div className="space-y-6">
+            <div className="bg-[#1a2332] rounded-b-2xl p-6 sm:p-8 text-white">
+              <div className="flex items-cennter justify-between space-y-4 sm:space-y-6">
                 {/* Working Hours */}
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold">
+                <div className="space-y-2 sm:space-y-3">
+                  <h3 className="text-xl sm:text-2xl font-bold">
                     রোগী দেখার সময়
                   </h3>
-                  <div className="flex items-center gap-3 text-[#4285f4]">
-                    <Clock size={20} />
-                    <p className="text-lg">
+                  <div className="flex items-center gap-2 sm:gap-3 text-[#A4AEBE]">
+                    <Clock size={18} className="sm:w-5 sm:h-5" />
+                    <p className="text-base sm:text-lg">
                       প্রতিদিন বিকাল ৩টা থেকে রাত ৮টা
                     </p>
                   </div>
@@ -112,17 +112,17 @@ export default function BookingProcess() {
                 <div className="border-t border-gray-600"></div>
 
                 {/* Contact Button */}
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">
+                <div className="flex flex-col-reverse items-center justify-center gap-2">
+                  <div className="text-center">
+                    <p className="text-gray-400 text-xs sm:text-sm mb-1">
                       সিরিয়ালের জন্য
                     </p>
-                    <p className="text-xl font-semibold">
+                    <p className="text-lg font-semibold break-all">
                       01974-896998
                     </p>
                   </div>
-                  <button className="bg-[#8B4F7C] hover:bg-[#6B3F6C] transition-colors rounded-2xl p-4">
-                    <Phone size={28} />
+                  <button className="bg-[#6C234C] transition-colors rounded-t-2xl p-3 sm:p-4">
+                    <Phone size={24} className="sm:w-7 sm:h-7" />
                   </button>
                 </div>
               </div>
