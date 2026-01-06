@@ -13,16 +13,20 @@ export default function Banner() {
           <div className="flex-1 container mx-auto flex items-center justify-center">
             <div className="max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
-                ডাঃ চৌধুরী ফারহানা তিন্নি{" "}
+                ডাঃ সারজিনা আনোয়ার{" "}
                 <TypingText
-                  text={["চর্ম ও যৌনরোগ", "স্কিন স্পেশালিস্ট"]}
+                  text={[
+                    "Pediatric Care",
+                    "Cardio Care",
+                    "Orthodontic",
+                  ]}
                   typingSpeed={75}
                   pauseDuration={1500}
                   showCursor={true}
                   cursorCharacter="|"
                   cursorClassName="text-[#F8F329]"
                   className="text-3xl md:text-4xl lg:text-5xl font-semibold inline-block"
-                  textColors={["#F8F329", "#F8F329"]}
+                  textColors={["#F8F329", "#F8F329", "#F8F329"]}
                   variableSpeed={{ min: 50, max: 120 }}
                 />
               </h3>

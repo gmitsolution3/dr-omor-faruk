@@ -82,16 +82,24 @@ export default function Header() {
             </span>
             <div>
               <h3 className="font-medium">সিরিয়ালের জন্য</h3>
-              <p className="text-[#525766] text-sm">01893730341</p>
+              <p className="text-[#525766] text-sm">
+                <a href="tel:+880 1711-796221">+880 1711-796221</a>
+              </p>
             </div>
           </div>
 
           <div className="hidden lg:block">
             <Button
+              asChild
               variant="primary"
               className="bg-[#6C234C] hover:bg-[#10172E]"
             >
-              অ্যাপয়েন্টমেন্ট বুক করুন
+              <a
+                href="https://forms.gle/hRaBxfPtMFmPVXuW8"
+                target="_blank"
+              >
+                অ্যাপয়েন্টমেন্ট বুক করুন
+              </a>
             </Button>
           </div>
         </div>
@@ -158,7 +166,9 @@ export default function Header() {
                     সিরিয়ালের জন্য
                   </h3>
                   <p className="text-[#525766] text-xs">
-                    01893730341
+                    <a href="tel:+880 1711-796221">
+                      +880 1711-796221
+                    </a>
                   </p>
                 </div>
               </div>
