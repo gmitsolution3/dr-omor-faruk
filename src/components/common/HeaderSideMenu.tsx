@@ -16,9 +16,9 @@ export default function HeaderSideMenu() {
       </SheetTrigger>
       <SheetContent className="bg-[#10172E] text-white border-l-0">
         <SheetHeader>
-          <SheetTitle className="text-white">
-            কন্টাক্ট ডিটেইলস
-            <p className="mt-5 font-normal">ডার্মাটোসার্জন</p>
+          <SheetTitle className="text-white text-3xl mt-12">
+            ডাঃ চৌধুরী ফারহানা তিন্নি
+            <p className="mt-5 text-lg font-light">ডার্মাটোসার্জন</p>
           </SheetTitle>
           <SheetDescription>
             <div className="space-y-4 mt-4">
@@ -36,7 +36,7 @@ export default function HeaderSideMenu() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#423D96] mb-2">
+                <h3 className="font-bold text-white mb-2">
                   Surecell Medical, Chattogram
                 </h3>
                 <p className="text-sm text-gray-300">
@@ -45,11 +45,11 @@ export default function HeaderSideMenu() {
                 </p>
               </div>
               <div>
-                <h3 className="font-bold text-[#423D96] mb-2">ফোন</h3>
+                <h3 className="font-bold text-white mb-2">ফোন</h3>
                 <p className="text-sm text-gray-300">01974-896998</p>
               </div>
               <div>
-                <h3 className="font-bold text-[#423D96] mb-2">
+                <h3 className="font-bold text-white mb-2">
                   সময়
                 </h3>
                 <p className="text-sm text-gray-300">
