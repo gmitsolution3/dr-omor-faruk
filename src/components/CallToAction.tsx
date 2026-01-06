@@ -2,7 +2,10 @@ import { Phone } from "lucide-react";
 
 export default function CallToAction() {
   return (
-    <section id="contact" className="bg-[#1a2332] py-12 md:py-16 lg:py-20">
+    <section
+      id="contact"
+      className="bg-[#1a2332] py-12 md:py-16 lg:py-20"
+    >
       <div className="container mx-auto px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
           {/* Left side - Text */}
@@ -33,9 +36,12 @@ export default function CallToAction() {
 
               {/* Appointment Button */}
               <button className="bg-[#F8F329] text-gray-900 rounded-tr-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[#e6e024] transition-colors flex items-center justify-center gap-2 font-bold text-sm md:text-base flex-1 lg:flex-initial">
-                <span className="whitespace-nowrap">
+                <a
+                  href="https://forms.gle/hRaBxfPtMFmPVXuW8"
+                  target="_blank"
+                >
                   অ্যাপয়েন্টমেন্ট বুক করুন
-                </span>
+                </a>
               </button>
             </div>
           </div>

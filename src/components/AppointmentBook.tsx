@@ -1,15 +1,26 @@
 import { useState } from "react";
+import type { ChangeEvent } from "react";
 import { Button } from "./ui/button";
+import { getPreFilledForm } from "@/utils/generatePreFilledForm";
+
+interface IFormData {
+  name: string;
+  phoneNumber: string;
+  location: string;
+  address: string;
+}
 
 export default function AppointmentBook() {
-  const [formData, setFormData] = useState({
-    customerName: "",
+  const [formData, setFormData] = useState<IFormData>({
+    name: "",
     phoneNumber: "",
-    serviceLocation: "",
+    location: "",
     address: "",
   });
 
-  const handleChange = (e: { target: { name: any; value: any } }) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -18,8 +29,9 @@ export default function AppointmentBook() {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
+    const formLink = getPreFilledForm(formData);
+
+    window.open(formLink, "_blank");
   };
 
   return (
@@ -62,9 +74,9 @@ export default function AppointmentBook() {
                 <div>
                   <input
                     type="text"
-                    name="customerName"
+                    name="name"
                     placeholder="আপনার নাম"
-                    value={formData.customerName}
+                    value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-sm md:text-base"
                   />
@@ -85,8 +97,8 @@ export default function AppointmentBook() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <select
-                    name="serviceLocation"
-                    value={formData.serviceLocation}
+                    name="location"
+                    value={formData.location}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#4285f4] focus:border-transparent text-gray-700 text-sm md:text-base"
                   >

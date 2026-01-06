@@ -32,7 +32,10 @@ export default function WhyChooseUsSection() {
   ];
 
   return (
-    <section id="faq" className="py-12 md:py-16 lg:py-20 bg-[#0f1621]">
+    <section
+      id="faq"
+      className="py-12 md:py-16 lg:py-20 bg-[#0f1621]"
+    >
       <div className="container mx-auto px-4 lg:px-0">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Content */}
@@ -52,10 +55,16 @@ export default function WhyChooseUsSection() {
             {/* CTA Button */}
             <div className="pt-2 md:pt-4">
               <Button
+                asChild
                 variant="primary"
-                className="bg-gradient-to-r from-[#6C234C] to-[#4a1835] "
+                className="bg-[#6C234C] hover:bg-[#10172E]"
               >
-                অ্যাপয়েন্টমেন্ট বুক করুন
+                <a
+                  href="https://forms.gle/hRaBxfPtMFmPVXuW8"
+                  target="_blank"
+                >
+                  অ্যাপয়েন্টমেন্ট বুক করুন
+                </a>
               </Button>
             </div>
           </div>
