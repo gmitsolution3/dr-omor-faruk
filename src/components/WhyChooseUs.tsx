@@ -6,7 +6,7 @@ export default function WhyChooseUsSection() {
     {
       icon: <Syringe size={48} className="text-yellow-400" />,
       title: "উন্নত প্রযুক্তি",
-      bgColor: "bg-gradient-to-br from-[#6C234C] to-[#4a1835]",
+      bgColor: "bg-gradient-to-br from-primary to-[#4a1835]",
       rounded: "rounded-tl-[40px]",
     },
     {
@@ -26,7 +26,7 @@ export default function WhyChooseUsSection() {
     {
       icon: <Hand size={48} className="text-yellow-400" />,
       title: "নিশ্চিত সুরক্ষা সেবা",
-      bgColor: "bg-gradient-to-br from-[#6C234C] to-[#4a1835]",
+      bgColor: "bg-gradient-to-br from-primary to-[#4a1835]",
       rounded: "rounded-br-[40px]",
     },
   ];
@@ -57,7 +57,7 @@ export default function WhyChooseUsSection() {
               <Button
                 asChild
                 variant="primary"
-                className="bg-[#6C234C] hover:bg-[#10172E]"
+                className="bg-primary hover:bg-[#10172E]"
               >
                 <a
                   href="https://forms.gle/hRaBxfPtMFmPVXuW8"

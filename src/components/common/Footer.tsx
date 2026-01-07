@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Left - Icon and Text */}
             <div className="flex items-center gap-6">
-              <div className="bg-[#6C234C] rounded-t-2xl p-4 flex-shrink-0">
+              <div className="bg-primary rounded-t-2xl p-4 flex-shrink-0">
                 <Mail size={35} />
               </div>
               <div>
@@ -52,12 +52,12 @@ export default function Footer() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="আপনার ইমেইল অ্যাড্রেস দিন"
-                className="flex-1 md:w-80 px-6 py-4 rounded-l-xl bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#6C234C]"
+                className="flex-1 md:w-80 px-6 py-4 rounded-l-xl bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
               <button
                 type="submit"
-                className="bg-[#6C234C] hover:bg-[#6C234C] transition-colors px-8 py-4 rounded-r-xl font-semibold whitespace-nowrap"
+                className="bg-primary hover:bg-primary transition-colors px-8 py-4 rounded-r-xl font-semibold whitespace-nowrap"
               >
                 সাবস্ক্রাইব
               </button>

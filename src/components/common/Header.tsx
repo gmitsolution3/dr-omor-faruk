@@ -65,7 +65,7 @@ export default function Header() {
 
           {/* Contact Info - Hidden on mobile, shown on desktop */}
           <div className="hidden lg:flex items-center space-x-3 border-r border-[#EAEAEA] pe-5">
-            <span className="bg-[#6C234C] text-white p-4 rounded-t-2xl">
+            <span className="bg-primary text-white p-4 rounded-t-2xl">
               <MapPin />
             </span>
             <div>
@@ -77,7 +77,7 @@ export default function Header() {
           </div>
 
           <div className="hidden lg:flex items-center space-x-3 border-r border-[#EAEAEA] pe-5">
-            <span className="bg-[#6C234C] text-white p-4 rounded-t-2xl">
+            <span className="bg-primary text-white p-4 rounded-t-2xl">
               <Phone />
             </span>
             <div>
@@ -92,7 +92,7 @@ export default function Header() {
             <Button
               asChild
               variant="primary"
-              className="bg-[#6C234C] hover:bg-[#10172E]"
+              className="bg-primary hover:bg-[#10172E]"
             >
               <a
                 href="https://forms.gle/hRaBxfPtMFmPVXuW8"
@@ -112,7 +112,7 @@ export default function Header() {
                 <li>
                   <MenuLink
                     to={item.to}
-                    className="text-[#423D96] hover:text-[#6C234C] font-medium transition-colors text-sm"
+                    className="text-[#423D96] hover:text-primary font-medium transition-colors text-sm"
                   >
                     {item.name}
                   </MenuLink>
@@ -134,7 +134,7 @@ export default function Header() {
                 <li>
                   <MenuLink
                     to={item.to}
-                    className="block text-[#423D96] hover:text-[#6C234C] font-medium transition-colors py-2 text-sm"
+                    className="block text-[#423D96] hover:text-primary font-medium transition-colors py-2 text-sm"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -146,7 +146,7 @@ export default function Header() {
             {/* Mobile Contact Info */}
             <div className="mt-6 space-y-4 border-t border-[#EAEAEA] pt-4">
               <div className="flex items-center space-x-3">
-                <span className="bg-[#6C234C] text-white p-3 rounded-t-2xl">
+                <span className="bg-primary text-white p-3 rounded-t-2xl">
                   <MapPin size={20} />
                 </span>
                 <div>
@@ -158,7 +158,7 @@ export default function Header() {
               </div>
 
               <div className="flex items-center space-x-3">
-                <span className="bg-[#6C234C] text-white p-3 rounded-t-2xl">
+                <span className="bg-primary text-white p-3 rounded-t-2xl">
                   <Phone size={20} />
                 </span>
                 <div>
@@ -176,7 +176,7 @@ export default function Header() {
               <Button
                 asChild
                 variant="primary"
-                className="bg-[#6C234C] hover:bg-[#10172E]"
+                className="bg-primary hover:bg-[#10172E]"
               >
                 <a
                   href="https://forms.gle/hRaBxfPtMFmPVXuW8"

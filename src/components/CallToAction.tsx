@@ -20,7 +20,7 @@ export default function CallToAction() {
           <div className="flex-shrink-0 w-full lg:w-auto">
             <div className="relative flex items-stretch">
               {/* Phone Button */}
-              <button className="bg-[#6C234C] text-white rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[#4a1835] transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
+              <button className="bg-primary text-white rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-primary/60 transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
                 <Phone size={18} className="md:w-5 md:h-5" />
                 <span className="whitespace-nowrap">
                   +8801974-896998

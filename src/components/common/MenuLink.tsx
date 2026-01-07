@@ -18,7 +18,7 @@ const MenuLink = ({
 }: IMenuLink) => {
   const { pathname } = useLocation();
 
-  const active = "text-[#6C234C]";
+  const active = "text-primary";
 
   return (
     <a

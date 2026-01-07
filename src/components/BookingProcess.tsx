@@ -55,7 +55,7 @@ export default function BookingProcess() {
                 <div key={index} className="space-y-3 sm:space-y-4">
                   {/* Icon with number */}
                   <div className="relative inline-block">
-                    <div className="bg-[#6C234C] rounded-t-2xl p-4 sm:p-5 md:p-6 inline-block">
+                    <div className="bg-primary rounded-t-2xl p-4 sm:p-5 md:p-6 inline-block">
                       {step.icon}
                     </div>
                     <div className="absolute top-4 -right-8 bg-[#1a2332] text-white rounded-t-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-base sm:text-lg">
@@ -121,7 +121,7 @@ export default function BookingProcess() {
                       01974-896998
                     </p>
                   </div>
-                  <button className="bg-[#6C234C] transition-colors rounded-t-2xl p-3 sm:p-4">
+                  <button className="bg-primary transition-colors rounded-t-2xl p-3 sm:p-4">
                     <Phone size={24} className="sm:w-7 sm:h-7" />
                   </button>
                 </div>
