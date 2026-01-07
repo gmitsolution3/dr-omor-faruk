@@ -8,22 +8,22 @@ import { Button } from "./ui/button";
 export default function StatsAndServicesSection() {
   const stats = [
     {
-      icon: <Users size={48} className="text-[#6C234C]" />,
+      icon: <Users size={48} className="text-primary" />,
       number: "2,200",
       label: "রোগীকে সেবা প্রদান",
     },
     {
-      icon: <Award size={48} className="text-[#6C234C]" />,
+      icon: <Award size={48} className="text-primary" />,
       number: "8",
       label: "বছরের অভিজ্ঞতা",
     },
     {
-      icon: <Syringe size={48} className="text-[#6C234C]" />,
+      icon: <Syringe size={48} className="text-primary" />,
       number: "700",
       label: "ডাক্তি সমসা সমাধান",
     },
     {
-      icon: <UserCheck size={48} className="text-[#6C234C]" />,
+      icon: <UserCheck size={48} className="text-primary" />,
       number: "6",
       label: "প্রফেশনাল ট্রেনিং",
     },
@@ -67,7 +67,7 @@ export default function StatsAndServicesSection() {
                 <div className="space-y-1">
                   <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                     {stat.number}
-                    <span className="text-[#6C234C]">+</span>
+                    <span className="text-primary">+</span>
                   </h3>
                   <p className="text-gray-600 text-xs md:text-sm lg:text-base leading-snug">
                     {stat.label}
@@ -92,7 +92,7 @@ export default function StatsAndServicesSection() {
             </div>
             <Button
               variant="primary"
-              className="bg-[#6C234C] hover:bg-[#10172E]"
+              className="bg-primary hover:bg-[#10172E]"
             >
               সব সার্ভিসেস
             </Button>

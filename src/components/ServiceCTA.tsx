@@ -121,7 +121,7 @@ export default function ServicesCTA() {
             <div className="pt-2 md:pt-4">
               <Button
                 variant="primary"
-                className="bg-[#6C234C] hover:hover:bg-[#10172E]"
+                className="bg-primary hover:hover:bg-[#10172E]"
               >
                 বিস্তারিত জানতে
               </Button>
