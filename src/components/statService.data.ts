@@ -1,8 +1,9 @@
 import { Users, Award, Syringe, UserCheck } from "lucide-react";
-import FacePRCImage from "@/assets/faceprc.jpg";
-import HairPRCImage from "@/assets/hairprc.jpg";
-import Botox from "@/assets/botox.jpg";
-import Filler from "@/assets/filler.jpg";
+
+import ChildDiagnosisTwo from "@/assets/child-diagnosis-two.jpg"
+import Pediatric from "@/assets/pediatric.jpg"
+import NeuroDevelopment from "@/assets/neuro-development.jpg"
+import Autism from "@/assets/autism.jpg"
 
 export const statsServicesData = {
   id: "gallery",
@@ -14,10 +15,10 @@ export const statsServicesData = {
     { icon: UserCheck, number: "৬", label: "প্রফেশনাল ট্রেনিং" },
   ],
   services: [
-    { image: FacePRCImage, title: "চাইল্ড ডায়াগনোসিস" },
-    { image: HairPRCImage, title: "পেডিয়েট্রিক নিউরোলজি" },
-    { image: Botox, title: "নিউরো ডেভেলপমেন্ট" },
-    { image: Filler, title: "অটিজম কন্সাল্টেন্সি" },
+    { image: ChildDiagnosisTwo, title: "চাইল্ড ডায়াগনোসিস" },
+    { image: Pediatric, title: "পেডিয়েট্রিক নিউরোলজি" },
+    { image: NeuroDevelopment, title: "নিউরো ডেভেলপমেন্ট" },
+    { image: Autism, title: "অটিজম কন্সাল্টেন্সি" },
   ],
   sectionHeader: {
     subtitle: "পেডিয়াট্রিক ও নিউরলজি আধুনিক চিকিৎসা",

@@ -1,7 +1,7 @@
-import FacialImage from "@/assets/facial.jpg";
-import MakeupImage from "@/assets/makeup.jpg";
-import TreatmentImage from "@/assets/treatment.jpg";
 import DoctorImage from "@/assets/doctorImage.png";
+import ChildDiagnosisOne from "@/assets/child-diagnosis-one.jpg";
+import Medicin from "@/assets/medicine.jpg";
+import Treatment  from '@/assets/treatment-two.jpg';
 
 export const servicesData = {
   id: "services",
@@ -20,9 +20,9 @@ export const servicesData = {
     "শিশুদের বিকাশজনিত সমস্যা/ভ্যাক্সিন সমস্যা/চোখের সমস্যা",
   ],
   images: [
-    { src: FacialImage, alt: "Skin treatment consultation" },
-    { src: MakeupImage, alt: "Facial treatment" },
-    { src: TreatmentImage, alt: "Dermatology procedure" },
+    { src: ChildDiagnosisOne, alt: "Skin treatment consultation" },
+    { src: Medicin, alt: "Facial treatment" },
+    { src: Treatment, alt: "Dermatology procedure" },
   ],
   doctor: {
     image: DoctorImage,

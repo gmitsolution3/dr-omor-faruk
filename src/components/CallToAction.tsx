@@ -37,7 +37,7 @@ export default function CallToAction() {
               {/* "Or" Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                 <span
-                  className={`flex items-center justify-center text-xs md:text-sm font-medium shadow-lg border-2 ${callToActionData.orBadge.textColor} border-[${callToActionData.orBadge.borderColor}] rounded-full w-${callToActionData.orBadge.size.base} h-${callToActionData.orBadge.size.base} md:w-${callToActionData.orBadge.size.md} md:h-${callToActionData.orBadge.size.md}`}
+                  className={`flex items-center justify-center text-xs md:text-sm font-medium shadow-lg border-2 ${callToActionData.orBadge.textColor} border-[${callToActionData.orBadge.borderColor}] rounded-full w-14 h-14 md:w-${callToActionData.orBadge.size.md} md:h-${callToActionData.orBadge.size.md}`}
                   style={{
                     backgroundColor: callToActionData.orBadge.bgColor,
                   }}

@@ -1,10 +1,24 @@
-import Banner from "./../components/Banner";
-import AppointmentBook from "./../components/AppointmentBook";
-import ServicesCTA from "./../components/ServiceCTA";
-import WhyChooseUsSection from "./../components/WhyChooseUs";
-import StatsAndServicesSection from "./../components/StatsAndServices";
-import CallToAction from "./../components/CallToAction";
-import BookingProcess from "./../components/BookingProcess";
+import { lazy } from "react";
+
+const Banner = lazy(() => import("./../components/Banner"));
+const AppointmentBook = lazy(
+  () => import("./../components/AppointmentBook")
+);
+const ServicesCTA = lazy(() => import("./../components/ServiceCTA"));
+
+const WhyChooseUsSection = lazy(
+  () => import("./../components/WhyChooseUs")
+);
+
+const StatsAndServicesSection = lazy(
+  () => import("./../components/StatsAndServices")
+);
+const CallToAction = lazy(
+  () => import("./../components/CallToAction")
+);
+const BookingProcess = lazy(
+  () => import("./../components/BookingProcess")
+);
 // import BlogSection from "./../components/BlogSection";
 
 export default function Home() {

@@ -5,8 +5,8 @@ import {
   Syringe,
   Clock,
 } from "lucide-react";
-import FacialImage from "@/assets/facial.jpg";
-import TreatmentImage from "@/assets/treatment.jpg";
+import FacialImage from "@/assets/autism.jpg";
+import TreatmentImage from "@/assets/treatment-two.jpg";
 
 export const bookingProcessData = {
   id: "blog",
