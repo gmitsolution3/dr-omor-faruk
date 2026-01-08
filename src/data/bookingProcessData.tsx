@@ -3,8 +3,6 @@ import {
   Users,
   UserCheck,
   Syringe,
-  Phone,
-  Clock,
 } from "lucide-react";
 import FacialImage from "@/assets/facial.jpg";
 import TreatmentImage from "@/assets/treatment.jpg";

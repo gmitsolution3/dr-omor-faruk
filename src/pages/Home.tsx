@@ -5,7 +5,6 @@ import WhyChooseUsSection from "./../components/WhyChooseUs";
 import StatsAndServicesSection from "./../components/StatsAndServices";
 import CallToAction from "./../components/CallToAction";
 import BookingProcess from "./../components/BookingProcess";
-import BlogSection from "./../components/BlogSection";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <StatsAndServicesSection />
       <CallToAction />
       <BookingProcess />
-      {/* <BlogSection /> */}
     </>
   );
 }
