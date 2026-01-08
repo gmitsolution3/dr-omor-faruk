@@ -1,51 +1,23 @@
-import {
-  FileText,
-  Users,
-  UserCheck,
-  Syringe,
-  Phone,
-  Clock,
-} from "lucide-react";
-import FacialImage from "@/assets/facial.jpg";
-import TreatmentImage from "@/assets/treatment.jpg";
+import { Phone, Clock } from "lucide-react";
+import { bookingProcessData } from "@/data/bookingProcessData";
 
 export default function BookingProcess() {
-  const steps = [
-    {
-      number: "01",
-      icon: <FileText size={32} className="text-white" />,
-      title: "অ্যাপয়েন্টমেন্ট বুকিং এর আবেদন করুন",
-    },
-    {
-      number: "02",
-      icon: <Users size={32} className="text-white" />,
-      title: "অ্যাপয়েন্টমেন্ট বুকিং রিসিট করা হবে",
-    },
-    {
-      number: "03",
-      icon: <UserCheck size={32} className="text-white" />,
-      title: "ফোন করে আপনাকে কনফার্ম করা হবে",
-    },
-    {
-      number: "04",
-      icon: <Syringe size={32} className="text-white" />,
-      title: "সরাসরি চেন্বরে এসে সেবা নিন",
-    },
-  ];
+  const { id, sectionClass, header, steps, images, contactCard } =
+    bookingProcessData;
 
   return (
-    <section id="blog" className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section id={id} className={sectionClass}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* Left side - Process Steps */}
+          {/* Left - Process Steps */}
           <div className="space-y-6 md:space-y-8">
             {/* Header */}
             <div className="space-y-3">
               <p className="text-primary font-medium text-sm md:text-base">
-                বুকিং সিস্টেম
+                {header.subtitle}
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
-                মাত্র ৪টি সহজ পদক্ষেপ এর মাধ্যমে সেবা নিন
+                {header.heading}
               </h2>
             </div>
 
@@ -72,24 +44,22 @@ export default function BookingProcess() {
             </div>
           </div>
 
-          {/* Right side - Images and Contact Card */}
+          {/* Right - Images & Contact */}
           <div className="space-y-4 sm:space-y-6">
             {/* Top Images */}
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="rounded-tl-2xl overflow-hidden aspect-square">
-                <img
-                  src={TreatmentImage}
-                  alt="Skin treatment"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="rounded-tr-2xl overflow-hidden aspect-square">
-                <img
-                  src={FacialImage}
-                  alt="Facial treatment"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              {images.map((img, index) => (
+                <div
+                  key={index}
+                  className={`overflow-hidden aspect-square ${img.className}`}
+                >
+                  <img
+                    src={img.src}
+                    alt={img.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
 
             {/* Contact Card */}
@@ -98,12 +68,12 @@ export default function BookingProcess() {
                 {/* Working Hours */}
                 <div className="space-y-2 sm:space-y-3">
                   <h3 className="text-xl sm:text-2xl font-bold">
-                    রোগী দেখার সময়
+                    {contactCard.workingHours.title}
                   </h3>
                   <div className="flex items-center gap-2 sm:gap-3 text-[#A4AEBE]">
                     <Clock size={18} className="sm:w-5 sm:h-5" />
                     <p className="text-white sm:text-lg">
-                      প্রতিদিন বিকাল ৩টা থেকে রাত ৮টা
+                      {contactCard.workingHours.hours}
                     </p>
                   </div>
                 </div>
@@ -115,10 +85,10 @@ export default function BookingProcess() {
                 <div className="flex flex-col-reverse items-center justify-center gap-2">
                   <div className="text-center">
                     <p className="text-white text-xs sm:text-sm mb-1">
-                      সিরিয়ালের জন্য
+                      {contactCard.phone.label}
                     </p>
                     <p className="text-lg text-white font-semibold break-all">
-                      01974-896998
+                      {contactCard.phone.number}
                     </p>
                   </div>
                   <button className="bg-white text-primary transition-colors rounded-t-2xl p-3 sm:p-4">

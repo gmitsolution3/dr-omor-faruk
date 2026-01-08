@@ -11,8 +11,8 @@ export default function CallToAction() {
           {/* Left side - Text */}
           <div className="text-white text-center lg:text-left flex-1">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed">
-              তুক ও যৌনস্বাস্থ্যের বিভিন্ন সমসা সমাধানের জন্য যোগায়োগ
-              করুন
+              পলিপাস, ফিস্টুলা, পাইলস সহ বিভিন্ন সমসা সমাধানের জন্য
+              যোগায়োগ করুন
             </h2>
           </div>
 
@@ -20,11 +20,14 @@ export default function CallToAction() {
           <div className="flex-shrink-0 w-full lg:w-auto">
             <div className="relative flex items-stretch">
               {/* Phone Button */}
-              <button className="bg-white text-primary rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-primary/60 transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
+              <button className="bg-white hover:bg-white text-primary rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-primary/60 transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
                 <Phone size={18} className="md:w-5 md:h-5" />
-                <span className="whitespace-nowrap">
-                  +8801974-896998
-                </span>
+                <a
+                  href="tel:+8801991482596"
+                  className="whitespace-nowrap"
+                >
+                  +8801991482596
+                </a>
               </button>
 
               {/* "Or" Badge */}

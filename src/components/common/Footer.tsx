@@ -4,12 +4,9 @@ import {
   MapPin,
   Phone,
   Clock,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Youtube,
   ChevronRight,
 } from "lucide-react";
+import { footerData } from "@/data/footerData";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -33,11 +30,10 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="text-2xl font-medium mb-2">
-                  নিউজলেটার সাবস্ক্রাইব করুন
+                  {footerData.newsletter.title}
                 </h3>
                 <p className="text-gray-400 max-w-100">
-                  এগামে তুক ও যৌনস্বাস্থ্য সচেতনতামূলক মূলক নানা রকম
-                  বিষয় নিয়ে আর্টিকেল পাবলিস করা হবা।
+                  {footerData.newsletter.description}
                 </p>
               </div>
             </div>
@@ -51,7 +47,7 @@ export default function Footer() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="আপনার ইমেইল অ্যাড্রেস দিন"
+                placeholder={footerData.newsletter.placeholder}
                 className="flex-1 md:w-80 px-6 py-4 rounded-l-xl bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />
@@ -59,7 +55,7 @@ export default function Footer() {
                 type="submit"
                 className="bg-primary hover:bg-primary transition-colors px-8 py-4 rounded-r-xl font-semibold whitespace-nowrap"
               >
-                সাবস্ক্রাইব
+                {footerData.newsletter.button}
               </button>
             </form>
           </div>
@@ -72,81 +68,52 @@ export default function Footer() {
           {/* About Us */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              About Us
+              {footerData.about.title}
             </h4>
             <div className="space-y-3 text-gray-300">
-              <p>Dr.Chowdhury Farhana Tinnee</p>
-              <p>MBBS, BCS (Health)</p>
-              <p>M.D (Dermatology & Venerology-BSMMU)</p>
+              {footerData.about.info.map((line, idx) => (
+                <p key={idx}>{line}</p>
+              ))}
             </div>
 
             {/* Social Media Icons */}
             <div className="flex gap-3 pt-4">
-              <a
-                href="#"
-                className="bg-[#2d3748] hover:bg-[#8B4F7C] transition-colors p-3 rounded-lg"
-                aria-label="Facebook"
-              >
-                <Facebook size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-[#2d3748] hover:bg-[#8B4F7C] transition-colors p-3 rounded-lg"
-                aria-label="Instagram"
-              >
-                <Instagram size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-[#2d3748] hover:bg-[#8B4F7C] transition-colors p-3 rounded-lg"
-                aria-label="LinkedIn"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="#"
-                className="bg-[#2d3748] hover:bg-[#8B4F7C] transition-colors p-3 rounded-lg"
-                aria-label="YouTube"
-              >
-                <Youtube size={20} />
-              </a>
+              {footerData.about.socials.map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  className="bg-[#2d3748] hover:bg-[#8B4F7C] transition-colors p-3 rounded-lg"
+                  aria-label={`Social ${idx}`}
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              Quick Links
+              {footerData.links.title}
             </h4>
             <nav className="space-y-3">
-              <a
-                href="#"
-                className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
-              >
-                <ChevronRight size={16} />
-                About Us
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
-              >
-                <ChevronRight size={16} />
-                Services
-              </a>
-              <a
-                href="#"
-                className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
-              >
-                <ChevronRight size={16} />
-                Contact
-              </a>
+              {footerData.links.items.map((link, idx) => (
+                <a
+                  key={idx}
+                  href="#"
+                  className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
+                >
+                  <ChevronRight size={16} />
+                  {link}
+                </a>
+              ))}
             </nav>
           </div>
 
           {/* Contact Details */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              Contact Details
+              {footerData.contact.title}
             </h4>
             <div className="space-y-4 text-gray-300">
               <div className="flex gap-3">
@@ -154,19 +121,15 @@ export default function Footer() {
                   size={20}
                   className="text-yellow-400 flex-shrink-0 mt-1"
                 />
-                <p className="leading-relaxed">
-                  Room no- 513,B block Popular diagnostic centre
-                  Chattogram (Opposite to Chittagong medical College)
-                  20b K.B. Fazlul Kader Rd, Chittagong
-                </p>
+                <p className="leading-relaxed">{footerData.contact.address}</p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-yellow-400" />
                 <a
-                  href="tel:+8801974896998"
+                  href={`tel:${footerData.contact.phone}`}
                   className="hover:text-yellow-400 transition-colors"
                 >
-                  +8801974-896998
+                  {footerData.contact.phone}
                 </a>
               </div>
             </div>
@@ -175,7 +138,7 @@ export default function Footer() {
           {/* Work Hours */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              Work Hours
+              {footerData.hours.title}
             </h4>
             <div className="flex items-center gap-3 text-gray-300">
               <Clock
@@ -183,8 +146,7 @@ export default function Footer() {
                 className="text-yellow-400 flex-shrink-0"
               />
               <div>
-                <p className="font-semibold">Sat - Fri :</p>
-                <p>03:00 PM - 08:00 PM</p>
+                <p className="font-semibold">{footerData.hours.timing}</p>
               </div>
             </div>
           </div>
@@ -195,11 +157,8 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>Design & Developed By GM IT</p>
-            <p>
-              Copyright © 2025 Dr. Chowdhury Farhana Tinnee All rights
-              reserved.
-            </p>
+            <p>{footerData.bottom.designer}</p>
+            <p>{footerData.bottom.copyright}</p>
           </div>
         </div>
       </div>

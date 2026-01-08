@@ -1,55 +1,13 @@
-import { Users, Award, Syringe, UserCheck } from "lucide-react";
-import FacePRCImage from "@/assets/faceprc.jpg";
-import HairPRCImage from "@/assets/hairprc.jpg";
-import Botox from "@/assets/botox.jpg";
-import Filler from "@/assets/filler.jpg";
 import { Button } from "./ui/button";
+import { statsAndServicesData } from "@/data/statAndServiceData";
 
 export default function StatsAndServicesSection() {
-  const stats = [
-    {
-      icon: <Users size={48} className="text-primary" />,
-      number: "2,200",
-      label: "রোগীকে সেবা প্রদান",
-    },
-    {
-      icon: <Award size={48} className="text-primary" />,
-      number: "8",
-      label: "বছরের অভিজ্ঞতা",
-    },
-    {
-      icon: <Syringe size={48} className="text-primary" />,
-      number: "700",
-      label: "ডাক্তি সমসা সমাধান",
-    },
-    {
-      icon: <UserCheck size={48} className="text-primary" />,
-      number: "6",
-      label: "প্রফেশনাল ট্রেনিং",
-    },
-  ];
-
-  const services = [
-    {
-      image: FacePRCImage,
-      title: "ফেস পিআরপি",
-    },
-    {
-      image: HairPRCImage,
-      title: "হেয়ার পিআরপি",
-    },
-    {
-      image: Botox,
-      title: "বোটক্স (Botox)",
-    },
-    {
-      image: Filler,
-      title: "ফিলার (Filler)",
-    },
-  ];
+  const { id, sectionClass, stats, servicesSection } =
+    statsAndServicesData;
+  const { subtitle, heading, cta, servicesGrid } = servicesSection;
 
   return (
-    <section id="gallery" className="py-12 md:py-16 lg:py-20 bg-gray-50">
+    <section id={id} className={sectionClass}>
       <div className="container mx-auto px-4 lg:px-0">
         {/* Stats Section */}
         <div className="bg-white rounded-2xl md:rounded-3xl shadow-lg p-6 md:p-8 lg:p-10 mb-12 md:mb-16 lg:mb-20">
@@ -84,23 +42,24 @@ export default function StatsAndServicesSection() {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0">
             <div>
               <p className="text-[#4285f4] font-medium mb-2 text-sm md:text-base">
-                তুক ও যৌনস্বাস্থ্য
+                {subtitle}
               </p>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
-                স্পেশালাইজড সার্ভিসেস
+                {heading}
               </h2>
             </div>
+
             <Button
               variant="primary"
               className="bg-primary hover:bg-[#10172E]"
             >
-              সব সার্ভিসেস
+              {cta.text}
             </Button>
           </div>
 
           {/* Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-            {services.map((service, index) => (
+            {servicesGrid.map((service, index) => (
               <div
                 key={index}
                 className="bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"

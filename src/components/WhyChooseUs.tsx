@@ -39,7 +39,7 @@ export default function WhyChooseUsSection() {
           <div className="space-y-6 md:space-y-8 text-center lg:text-left">
             {/* Subtitle */}
             <p className="text-white font-medium text-base md:text-lg">
-              তুক ও যৌনস্বাস্থ্য আধুনিক চিকিৎসা
+              পলিপাস, পাইলস, ফিস্টুলার আধুনিক চিকিৎসা
             </p>
 
             {/* Main Heading */}
