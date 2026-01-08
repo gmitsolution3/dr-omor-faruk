@@ -36,8 +36,8 @@ export default function Footer() {
                   নিউজলেটার সাবস্ক্রাইব করুন
                 </h3>
                 <p className="text-gray-400 max-w-100">
-                  এগামে তুক ও যৌনস্বাস্থ্য সচেতনতামূলক মূলক নানা রকম
-                  বিষয় নিয়ে আর্টিকেল পাবলিস করা হবা।
+                  শিশু ও পেডিয়াট্রিক সচেতনতামূলক বিভিন্ন বিষয় নিয়ে
+                  আর্টিকেল পাবলিশ করা হবে।
                 </p>
               </div>
             </div>
@@ -69,15 +69,22 @@ export default function Footer() {
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* About Us */}
+          {/* About Dr. Serjina Anwar */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              About Us
+              About Dr. Serjina Anwar
             </h4>
             <div className="space-y-3 text-gray-300">
-              <p>Dr.Chowdhury Farhana Tinnee</p>
-              <p>MBBS, BCS (Health)</p>
-              <p>M.D (Dermatology & Venerology-BSMMU)</p>
+              <p>Dr. SK. Serjina Anwar</p>
+              <p>MBBS (COMC), BCS (Health)</p>
+              <p>
+                DCH (Bangladesh Medical University, Ex-PG Hospital)
+              </p>
+              <p>FCPS (Paediatrics, BCPS)</p>
+              <p>
+                MD (Paediatric Neurology & Development, Bangladesh
+                Medical University)
+              </p>
             </div>
 
             {/* Social Media Icons */}
@@ -120,21 +127,21 @@ export default function Footer() {
             </h4>
             <nav className="space-y-3">
               <a
-                href="#"
+                href="#about"
                 className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
               >
                 <ChevronRight size={16} />
                 About Us
               </a>
               <a
-                href="#"
+                href="#services"
                 className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
               >
                 <ChevronRight size={16} />
                 Services
               </a>
               <a
-                href="#"
+                href="#contact"
                 className="flex items-center gap-2 text-gray-300 hover:text-yellow-400 transition-colors"
               >
                 <ChevronRight size={16} />
@@ -155,18 +162,17 @@ export default function Footer() {
                   className="text-yellow-400 flex-shrink-0 mt-1"
                 />
                 <p className="leading-relaxed">
-                  Room no- 513,B block Popular diagnostic centre
-                  Chattogram (Opposite to Chittagong medical College)
-                  20b K.B. Fazlul Kader Rd, Chittagong
+                  Kurmitola General Hospital, Dhaka <br />
+                  York Hospital Chamber (Sat-Wed, 5:00 PM - 8:30 PM)
                 </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-yellow-400" />
                 <a
-                  href="tel:+8801974896998"
+                  href="tel:+8801339511108"
                   className="hover:text-yellow-400 transition-colors"
                 >
-                  +8801974-896998
+                  +880 1339-511108
                 </a>
               </div>
             </div>
@@ -175,7 +181,7 @@ export default function Footer() {
           {/* Work Hours */}
           <div className="space-y-6">
             <h4 className="text-yellow-400 text-xl font-bold mb-4">
-              Work Hours
+              PT Appointment Hours
             </h4>
             <div className="flex items-center gap-3 text-gray-300">
               <Clock
@@ -183,8 +189,8 @@ export default function Footer() {
                 className="text-yellow-400 flex-shrink-0"
               />
               <div>
-                <p className="font-semibold">Sat - Fri :</p>
-                <p>03:00 PM - 08:00 PM</p>
+                <p className="font-semibold">PT Appointments:</p>
+                <p>11:00 AM - 11:00 PM</p>
               </div>
             </div>
           </div>
@@ -197,8 +203,8 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
             <p>Design & Developed By GM IT</p>
             <p>
-              Copyright © 2025 Dr. Chowdhury Farhana Tinnee All rights
-              reserved.
+              Copyright © {new Date().getFullYear()} Dr. SK. Serjina
+              Anwar All rights reserved.
             </p>
           </div>
         </div>

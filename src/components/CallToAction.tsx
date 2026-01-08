@@ -1,18 +1,20 @@
 import { Phone } from "lucide-react";
+import { callToActionData } from "@/data/cta.data";
 
 export default function CallToAction() {
   return (
     <section
-      id="contact"
-      className="bg-[#1a2332] py-12 md:py-16 lg:py-20"
+      id={callToActionData.id}
+      className={`py-12 md:py-16 lg:py-20 bg-[${callToActionData.bgColor}]`}
     >
       <div className="container mx-auto px-4 lg:px-0">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8">
+        <div
+          className={`flex flex-col lg:flex-row items-center justify-between ${callToActionData.gap}`}
+        >
           {/* Left side - Text */}
           <div className="text-white text-center lg:text-left flex-1">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold leading-relaxed">
-              তুক ও যৌনস্বাস্থ্যের বিভিন্ন সমসা সমাধানের জন্য যোগায়োগ
-              করুন
+              {callToActionData.heading}
             </h2>
           </div>
 
@@ -20,27 +22,43 @@ export default function CallToAction() {
           <div className="flex-shrink-0 w-full lg:w-auto">
             <div className="relative flex items-stretch">
               {/* Phone Button */}
-              <button className="bg-primary text-white rounded-tl-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-primary/60 transition-colors flex items-center justify-center gap-2 md:gap-3 font-medium text-sm md:text-base flex-1 lg:flex-initial">
-                <Phone size={18} className="md:w-5 md:h-5" />
+              <button
+                className={`flex items-center justify-center gap-2 md:gap-3 flex-1 lg:flex-initial font-medium text-sm md:text-base ${callToActionData.phoneButton.bgColor} ${callToActionData.phoneButton.textColor} ${callToActionData.phoneButton.rounded} py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:${callToActionData.phoneButton.hoverBg} transition-colors`}
+              >
+                <Phone
+                  size={callToActionData.phoneButton.iconSize}
+                  className="md:w-5 md:h-5"
+                />
                 <span className="whitespace-nowrap">
-                  +8801974-896998
+                  {callToActionData.phoneButton.number}
                 </span>
               </button>
 
               {/* "Or" Badge */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-                <span className="bg-[#10172E] text-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center text-xs md:text-sm font-medium shadow-lg border-2 border-[#1a2332]">
-                  অথবা
+                <span
+                  className={`flex items-center justify-center text-xs md:text-sm font-medium shadow-lg border-2 ${callToActionData.orBadge.textColor} border-[${callToActionData.orBadge.borderColor}] rounded-full w-${callToActionData.orBadge.size.base} h-${callToActionData.orBadge.size.base} md:w-${callToActionData.orBadge.size.md} md:h-${callToActionData.orBadge.size.md}`}
+                  style={{
+                    backgroundColor: callToActionData.orBadge.bgColor,
+                  }}
+                >
+                  {callToActionData.orBadge.text}
                 </span>
               </div>
 
               {/* Appointment Button */}
-              <button className="bg-[#F8F329] text-gray-900 rounded-tr-2xl py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[#e6e024] transition-colors flex items-center justify-center gap-2 font-bold text-sm md:text-base flex-1 lg:flex-initial">
+              <button
+                className={`flex items-center justify-center gap-2 flex-1 lg:flex-initial font-bold text-sm md:text-base ${callToActionData.appointmentButton.textColor} ${callToActionData.appointmentButton.rounded} py-3 md:py-4 px-4 md:px-6 lg:px-8 hover:bg-[${callToActionData.appointmentButton.hoverBg}] transition-colors`}
+                style={{
+                  backgroundColor:
+                    callToActionData.appointmentButton.bgColor,
+                }}
+              >
                 <a
-                  href="https://forms.gle/hRaBxfPtMFmPVXuW8"
+                  href={callToActionData.appointmentButton.link}
                   target="_blank"
                 >
-                  অ্যাপয়েন্টমেন্ট বুক করুন
+                  {callToActionData.appointmentButton.text}
                 </a>
               </button>
             </div>

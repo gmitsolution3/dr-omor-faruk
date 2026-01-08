@@ -2,15 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import TypingText from "@/components/ui/typing-text";
 import { bannerData } from "@/data/banner.data";
-
-type TButton =
-  | "primary"
-  | "link"
-  | "default"
-  | "destructive"
-  | "outline"
-  | "secondary"
-  | "ghost";
+import type { TButton } from "@/type";
 
 export default function Banner() {
   return (
