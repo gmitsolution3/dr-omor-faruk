@@ -35,32 +35,23 @@ export default function AppointmentBook() {
   };
 
   return (
-    <div className="bg-[#423D96] flex items-center justify-center px-4 py-12 md:py-20 lg:py-[150px]">
+    <div className="bg-white flex items-center justify-center px-4 py-12 md:py-20 lg:py-[150px]">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left side - Text content */}
-          <div className="text-white space-y-4 lg:space-y-6 text-center lg:text-left">
+          <div className="text-gray-700 space-y-4 lg:space-y-6 text-center lg:text-left">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 lg:mb-8">
               অ্যাপয়েন্টমেন্ট বুক করুন
             </h3>
 
-            <div className="space-y-3 lg:space-y-4 text-base font-light md:text-lg">
-              <p>
-                আপনি তুক, এনাজি, যৌনশক্তি বা সৌন্দর্যের মত নিয়ে
-                চিন্তিত?
-              </p>
-
-              <p>
-                একজিমা স্কিন, এলাজি, সেক্স, অ্যাথেটিক মেডিসিন
-                স্পেশালিস্ট ও ডায়েটেশিয়ান আপনার জন্য সঠিক সমাধান হতে
-                পারেন।
-              </p>
-
-              <p>
-                ডাঃ তৌহিদী ফারহানা ভিন্তি বাংলাদেশের একজন প্রথ্যাত
-                চর্মরোগ, এলাজি, যৌন স্বাথ্য, অ্যাথেটিক মেডিসিন
-                বিশেষজ্ঞ এবং ডায়েটেশিয়ান।
-              </p>
+            <div className="space-y-3 lg:space-y-4 text-base font-light md:text-lg text-gray-500">
+              আপনি কি পলিপাস, অর্শ, গ্যাস, পাইলস, ফিস্টুলা বা টনসিল
+              নিয়ে চিন্তিত? এই ধরনের সমস্যা সমাধানে ডাঃ ওমর
+              ফারুক, একজন অভিজ্ঞ চিকিৎসক এবং পপুলার হেল্থ
+              ক্লিনিকের ম্যানেজিং ডিরেক্টর, আপনার জন্য সঠিক সমাধান
+              হতে পারেন। ডাঃ ওমর ফারুক আর এম পি ডিগ্রিধারী, ডিপ্লোমা
+              ইন মেডিসিন (ডিএম) সম্পন্ন, এবং ডি এম এ ও ডি এম
+              সি সার্টিফিকেশনপ্রাপ্ত একজন দক্ষ ও যত্নশীল চিকিৎসক।
             </div>
           </div>
 

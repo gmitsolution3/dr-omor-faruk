@@ -41,7 +41,7 @@ export default function BookingProcess() {
           <div className="space-y-6 md:space-y-8">
             {/* Header */}
             <div className="space-y-3">
-              <p className="text-[#423D96] font-medium text-sm md:text-base">
+              <p className="text-primary font-medium text-sm md:text-base">
                 বুকিং সিস্টেম
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-gray-900 leading-tight">
@@ -58,7 +58,7 @@ export default function BookingProcess() {
                     <div className="bg-primary rounded-t-2xl p-4 sm:p-5 md:p-6 inline-block">
                       {step.icon}
                     </div>
-                    <div className="absolute top-4 -right-8 bg-[#1a2332] text-white rounded-t-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-base sm:text-lg">
+                    <div className="absolute top-4 -right-8 bg-white text-primary rounded-t-xl w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-bold text-base sm:text-lg border border-primary">
                       {step.number}
                     </div>
                   </div>
@@ -93,7 +93,7 @@ export default function BookingProcess() {
             </div>
 
             {/* Contact Card */}
-            <div className="bg-[#1a2332] rounded-b-2xl p-6 sm:p-8 text-white">
+            <div className="bg-primary rounded-b-2xl p-6 sm:p-8 text-white">
               <div className="flex items-cennter justify-between space-y-4 sm:space-y-6">
                 {/* Working Hours */}
                 <div className="space-y-2 sm:space-y-3">
@@ -102,7 +102,7 @@ export default function BookingProcess() {
                   </h3>
                   <div className="flex items-center gap-2 sm:gap-3 text-[#A4AEBE]">
                     <Clock size={18} className="sm:w-5 sm:h-5" />
-                    <p className="text-base sm:text-lg">
+                    <p className="text-white sm:text-lg">
                       প্রতিদিন বিকাল ৩টা থেকে রাত ৮টা
                     </p>
                   </div>
@@ -114,14 +114,14 @@ export default function BookingProcess() {
                 {/* Contact Button */}
                 <div className="flex flex-col-reverse items-center justify-center gap-2">
                   <div className="text-center">
-                    <p className="text-gray-400 text-xs sm:text-sm mb-1">
+                    <p className="text-white text-xs sm:text-sm mb-1">
                       সিরিয়ালের জন্য
                     </p>
-                    <p className="text-lg font-semibold break-all">
+                    <p className="text-lg text-white font-semibold break-all">
                       01974-896998
                     </p>
                   </div>
-                  <button className="bg-primary transition-colors rounded-t-2xl p-3 sm:p-4">
+                  <button className="bg-white text-primary transition-colors rounded-t-2xl p-3 sm:p-4">
                     <Phone size={24} className="sm:w-7 sm:h-7" />
                   </button>
                 </div>

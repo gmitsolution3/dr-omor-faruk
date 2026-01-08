@@ -4,40 +4,12 @@ import MenuLink from "./MenuLink";
 import HeaderSideMenu from "./HeaderSideMenu";
 import { Button } from "../ui/button";
 import { useState } from "react";
-
-const navItems = [
-  {
-    to: "banner",
-    name: "Home",
-  },
-  {
-    to: "banner",
-    name: "About",
-  },
-  {
-    to: "services",
-    name: "Services",
-  },
-  {
-    to: "faq",
-    name: "Faq",
-  },
-  {
-    to: "blog",
-    name: "Blog",
-  },
-  {
-    to: "gallery",
-    name: "Gallery",
-  },
-  {
-    to: "contact",
-    name: "Contact",
-  },
-];
+import { headerData } from "./../../data/headerData";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { logo, navItems, location, phone, appointment } = headerData;
 
   return (
     <header className="py-4 lg:py-8">
@@ -46,8 +18,11 @@ export default function Header() {
         <div className="flex flex-col lg:flex-row items-center justify-between lg:justify-around gap-4 lg:gap-0">
           {/* Logo */}
           <div className="w-full lg:w-auto flex justify-between items-center">
-            <Link to="/" className="font-bold text-xl lg:text-2xl">
-              Dr. SK Serjina Anwar
+            <Link
+              to={logo.link}
+              className="font-bold text-xl lg:text-2xl"
+            >
+              {logo.text}
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -63,42 +38,41 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Contact Info - Hidden on mobile, shown on desktop */}
+          {/* Location */}
           <div className="hidden lg:flex items-center space-x-3 border-r border-[#EAEAEA] pe-5">
             <span className="bg-primary text-white p-4 rounded-t-2xl">
               <MapPin />
             </span>
             <div>
-              <h3 className="font-medium">লোকেশন</h3>
+              <h3 className="font-medium">{location.title}</h3>
               <p className="text-[#525766] text-sm">
-                পাঁচলাইশ, প্রবর্তক মোড়, চট্টগ্রাম
+                {location.address}
               </p>
             </div>
           </div>
 
+          {/* Phone */}
           <div className="hidden lg:flex items-center space-x-3 border-r border-[#EAEAEA] pe-5">
             <span className="bg-primary text-white p-4 rounded-t-2xl">
               <Phone />
             </span>
             <div>
-              <h3 className="font-medium">সিরিয়ালের জন্য</h3>
+              <h3 className="font-medium">{phone.title}</h3>
               <p className="text-[#525766] text-sm">
-                <a href="tel:+880 1711-796221">+880 1711-796221</a>
+                <a href={`tel:${phone.number}`}>{phone.number}</a>
               </p>
             </div>
           </div>
 
+          {/* Appointment Button */}
           <div className="hidden lg:block">
             <Button
               asChild
               variant="primary"
               className="bg-primary hover:bg-[#10172E]"
             >
-              <a
-                href="https://forms.gle/hRaBxfPtMFmPVXuW8"
-                target="_blank"
-              >
-                অ্যাপয়েন্টমেন্ট বুক করুন
+              <a href={appointment.link} target="_blank">
+                {appointment.text}
               </a>
             </Button>
           </div>
@@ -107,12 +81,12 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:block mt-8 border-t border-[#EAEAEA] pt-6">
           <div className="flex items-center justify-between">
-            <ul className="flex items-center justify-start space-x-8 uppercase">
+            <ul className="flex items-center space-x-8 uppercase">
               {navItems.map((item) => (
-                <li>
+                <li key={item.name}>
                   <MenuLink
                     to={item.to}
-                    className="text-[#423D96] hover:text-primary font-medium transition-colors text-sm"
+                    className="text-primary hover:text-primary font-medium transition-colors text-sm"
                   >
                     {item.name}
                   </MenuLink>
@@ -120,9 +94,7 @@ export default function Header() {
               ))}
             </ul>
 
-            <div>
-              <HeaderSideMenu />
-            </div>
+            <HeaderSideMenu />
           </div>
         </nav>
 
@@ -131,10 +103,10 @@ export default function Header() {
           <nav className="lg:hidden mt-4 border-t border-[#EAEAEA] pt-4">
             <ul className="space-y-3">
               {navItems.map((item) => (
-                <li>
+                <li key={item.name}>
                   <MenuLink
                     to={item.to}
-                    className="block text-[#423D96] hover:text-primary font-medium transition-colors py-2 text-sm"
+                    className="block text-[#423D96] hover:text-primary font-medium py-2 text-sm"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -150,9 +122,11 @@ export default function Header() {
                   <MapPin size={20} />
                 </span>
                 <div>
-                  <h3 className="font-medium text-sm">লোকেশন</h3>
+                  <h3 className="font-medium text-sm">
+                    {location.title}
+                  </h3>
                   <p className="text-[#525766] text-xs">
-                    পাঁচলাইশ, প্রবর্তক মোড়, চট্টগ্রাম
+                    {location.address}
                   </p>
                 </div>
               </div>
@@ -163,12 +137,10 @@ export default function Header() {
                 </span>
                 <div>
                   <h3 className="font-medium text-sm">
-                    সিরিয়ালের জন্য
+                    {phone.title}
                   </h3>
                   <p className="text-[#525766] text-xs">
-                    <a href="tel:+880 1711-796221">
-                      +880 1711-796221
-                    </a>
+                    <a href={`tel:${phone.number}`}>{phone.number}</a>
                   </p>
                 </div>
               </div>
@@ -178,11 +150,8 @@ export default function Header() {
                 variant="primary"
                 className="bg-primary hover:bg-[#10172E]"
               >
-                <a
-                  href="https://forms.gle/hRaBxfPtMFmPVXuW8"
-                  target="_blank"
-                >
-                  অ্যাপয়েন্টমেন্ট বুক করুন
+                <a href={appointment.link} target="_blank">
+                  {appointment.text}
                 </a>
               </Button>
             </div>

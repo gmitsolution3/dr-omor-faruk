@@ -7,6 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Clock, Phone } from "lucide-react";
 
 export default function HeaderSideMenu() {
   return (
@@ -14,7 +15,7 @@ export default function HeaderSideMenu() {
       <SheetTrigger>
         <Menu />
       </SheetTrigger>
-      <SheetContent className="bg-[#10172E] text-white border-l-0">
+      <SheetContent className="bg-primary text-white border-l-0">
         <SheetHeader>
           <SheetTitle className="text-white text-3xl mt-12">
             ডাঃ চৌধুরী ফারহানা তিন্নি
@@ -30,7 +31,7 @@ export default function HeaderSideMenu() {
                   রুম নং: ৫১৩ বি ব্লক, ২০/বি, কে.বি. ফজলুল কাদের রোড,
                   পাঁচলাইশ, চট্টগ্রাম।
                 </p>
-                <p className="text-xs text-gray-400 mt-1">
+                <p className="text-xs text-gray-300 mt-1">
                   (চট্টগ্রাম মেডিকেল কলেজ ও হাসপাতালের পূর্ব গেইটের
                   পাশে)
                 </p>
@@ -44,13 +45,15 @@ export default function HeaderSideMenu() {
                   নিজাম রোড প্রবর্তক মোড়, চট্টগ্রাম।
                 </p>
               </div>
-              <div>
-                <h3 className="font-bold text-white mb-2">ফোন</h3>
+              <div className="flex items-center gap-x-2">
+                <h3 className="font-bold text-white">
+                  <Phone />
+                </h3>
                 <p className="text-sm text-gray-300">01974-896998</p>
               </div>
-              <div>
-                <h3 className="font-bold text-white mb-2">
-                  সময়
+              <div className="flex items-center gap-x-2">
+                <h3 className="font-bold text-white">
+                  <Clock />
                 </h3>
                 <p className="text-sm text-gray-300">
                   প্রতিদিন বিকাল ৪টা থেকে সন্ধ্যা ৭টা পর্যন্ত

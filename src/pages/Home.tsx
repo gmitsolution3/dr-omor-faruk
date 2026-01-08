@@ -17,7 +17,7 @@ export default function Home() {
       <StatsAndServicesSection />
       <CallToAction />
       <BookingProcess />
-      <BlogSection />
+      {/* <BlogSection /> */}
     </>
   );
 }
