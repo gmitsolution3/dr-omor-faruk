@@ -7,6 +7,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { sideMenuData } from "@/data/sidemenu.data";
 
 export default function HeaderSideMenu() {
   return (
@@ -17,43 +18,39 @@ export default function HeaderSideMenu() {
       <SheetContent className="bg-[#10172E] text-white border-l-0">
         <SheetHeader>
           <SheetTitle className="text-white text-3xl mt-12">
-            ডাঃ চৌধুরী ফারহানা তিন্নি
-            <p className="mt-5 text-lg font-light">ডার্মাটোসার্জন</p>
+            {sideMenuData.doctor.name}
+            <p className="mt-5 text-lg font-light">
+              {sideMenuData.doctor.title}
+            </p>
           </SheetTitle>
+
           <SheetDescription>
             <div className="space-y-4 mt-4">
-              <div>
-                <h3 className="font-bold mb-2 text-white">
-                  পপুলার ডায়াগনস্টিক সেন্টার
-                </h3>
-                <p className="text-sm text-gray-300">
-                  রুম নং: ৫১৩ বি ব্লক, ২০/বি, কে.বি. ফজলুল কাদের রোড,
-                  পাঁচলাইশ, চট্টগ্রাম।
-                </p>
-                <p className="text-xs text-gray-400 mt-1">
-                  (চট্টগ্রাম মেডিকেল কলেজ ও হাসপাতালের পূর্ব গেইটের
-                  পাশে)
-                </p>
-              </div>
-              <div>
-                <h3 className="font-bold text-white mb-2">
-                  Surecell Medical, Chattogram
-                </h3>
-                <p className="text-sm text-gray-300">
-                  আল-নূর বদরুন সেন্টার (৪র্থ তলা) ১৪৮৬-১৬৭২, ও.আর.
-                  নিজাম রোড প্রবর্তক মোড়, চট্টগ্রাম।
-                </p>
-              </div>
+              {/* Centers */}
+              {sideMenuData.centers.map((center, idx) => (
+                <div key={idx}>
+                  <h3 className="font-bold mb-2 text-white">
+                    {center.name}
+                  </h3>
+                  <p className="text-sm text-gray-300">
+                    {center.address}
+                  </p>
+                </div>
+              ))}
+
+              {/* Phone */}
               <div>
                 <h3 className="font-bold text-white mb-2">ফোন</h3>
-                <p className="text-sm text-gray-300">01974-896998</p>
-              </div>
-              <div>
-                <h3 className="font-bold text-white mb-2">
-                  সময়
-                </h3>
                 <p className="text-sm text-gray-300">
-                  প্রতিদিন বিকাল ৪টা থেকে সন্ধ্যা ৭টা পর্যন্ত
+                  {sideMenuData.phone}
+                </p>
+              </div>
+
+              {/* Timing */}
+              <div>
+                <h3 className="font-bold text-white mb-2">সময়</h3>
+                <p className="text-sm text-gray-300">
+                  {sideMenuData.timing}
                 </p>
               </div>
             </div>

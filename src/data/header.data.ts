@@ -1,4 +1,4 @@
-import { MapPin, Phone, Menu, X } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 
 export const headerData = {
   logo: {
