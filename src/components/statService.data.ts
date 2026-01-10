@@ -11,7 +11,6 @@ import SeribalPlesy from "@/assets/seribal-plesy.jpg";
 import ChildMigrane from "@/assets/child-migrane.webp";
 import SnayoBipak from "@/assets/snayo-bipak.webp";
 import SnayoBidda from "@/assets/snayo-bidda.webp";
-import gotiRog from "@/assets/goti-rog.jpg";
 
 export const statsServicesData = {
   id: "gallery",
