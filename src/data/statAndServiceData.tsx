@@ -4,6 +4,8 @@ import HairPRCImage from "@/assets/hairprc.jpg";
 import Botox from "@/assets/botox.jpg";
 import Filler from "@/assets/filler.jpg";
 
+// import NasalPolypas from "@/assets/nasal-polyps.jpg"
+
 export const statsAndServicesData = {
   id: "gallery",
   sectionClass: "py-12 md:py-16 lg:py-20 bg-gray-50",

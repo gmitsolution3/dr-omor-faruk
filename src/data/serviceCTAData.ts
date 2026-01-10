@@ -3,6 +3,10 @@ import MakeupImage from "@/assets/makeup.jpg";
 import TreatmentImage from "@/assets/treatment.jpg";
 import DoctorImage from "@/assets/dr-omor-faruk.jpg";
 
+import PolypasImage from "@/assets/polypas.webp";
+import OrshoImage from "@/assets/orsho.webp";
+import GejPicture from "@/assets/gej.jpg";
+
 export const servicesCTAData = {
   id: "services",
   sectionClass: "py-12 md:py-16 lg:py-20 bg-gray-50",
@@ -10,19 +14,19 @@ export const servicesCTAData = {
   images: {
     grid: [
       {
-        src: FacialImage,
+        src: PolypasImage,
         alt: "Skin treatment consultation",
         className: "h-48 md:h-64 lg:h-80",
       },
       {
-        src: MakeupImage,
+        src: OrshoImage,
         alt: "Facial treatment",
         className: "h-48 md:h-64 lg:h-80",
       },
       {
-        src: TreatmentImage,
+        src: GejPicture,
         alt: "Dermatology procedure",
-        className: "h-48 md:h-64 lg:h-72 col-span-2",
+        className: "h-48 md:h-64 lg:h-72 col-span-2 object-contain",
       },
     ],
   },
