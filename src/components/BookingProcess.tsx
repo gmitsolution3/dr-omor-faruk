@@ -121,8 +121,12 @@ export default function BookingProcess() {
                     <p className="text-gray-400 text-xs sm:text-sm mb-1">
                       {bookingProcessData.contactCard.phone.label}
                     </p>
-                    <p className="text-lg font-semibold break-all">
-                      {bookingProcessData.contactCard.phone.number}
+                    <p className="text-lg font-semibold break-all flex flex-col">
+                      {bookingProcessData.contactCard.phone.number.map(
+                        (item) => (
+                          <span key={item}>{item}</span>
+                        )
+                      )}
                     </p>
                   </div>
                   <button

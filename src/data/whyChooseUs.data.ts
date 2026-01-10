@@ -3,7 +3,7 @@ import { Syringe, Award, UserCircle, Hand } from "lucide-react";
 export const whyChooseUsData = {
   id: "faq",
   bgColor: "#0f1621",
-  subtitle: "পেডিয়াট্রিক ও নিউরলজি আধুনিক চিকিৎসা",
+  subtitle: "পেডিয়াট্রিক ও নিউরোলজি আধুনিক চিকিৎসা",
   subtitleColor: "#28B9DA",
   heading:
     "সবচেয়ে সেরা উপায়ে এবং যত্নের সাথে\nঅত্যন্ত নির্ভরতাবে সেবা প্রদান করা হয়",

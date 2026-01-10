@@ -1,7 +1,7 @@
 import DoctorImage from "@/assets/doctorImage.png";
 import ChildDiagnosisOne from "@/assets/child-diagnosis-one.jpg";
 import Medicin from "@/assets/medicine.jpg";
-import Treatment  from '@/assets/treatment-two.jpg';
+import Treatment from "@/assets/treatment-two.jpg";
 
 export const servicesData = {
   id: "services",
@@ -14,10 +14,12 @@ export const servicesData = {
     "শিশুদের স্নায়ু জনিত সমস্যা, অটিজম, ডাউন সিন্ড্রোম, মাথা ব্যাথা, মাইগ্রেন জাতীয় সমস্যায় দক্ষ বিশেষজ্ঞ।",
   ],
   services: [
-    "জর, সর্দি, কাশি",
-    "শ্বাসকস্ট, বমি, কোষ্ঠকাঠিন্য",
-    "দুর্বলতা, শরীর ফ্যাকাশে/হলদে হয়ে যাওয়া, বৃদ্ধি না পাওয়া",
-    "শিশুদের বিকাশজনিত সমস্যা/ভ্যাক্সিন সমস্যা/চোখের সমস্যা",
+    "মৃগী ও খিঁচুনি রোগ",
+    "স্নায়ু-বিকাশগত রোগ",
+    "স্নায়ু-পেশী রোগ",
+    "মাথাব্যথা ও মাইগ্রেন (শিশুদের)",
+    "সেরিব্রাল পালসি ব্যবস্থাপনা",
+    "স্নায়ু-জিনগত ও বিপাকীয় রোগ",
   ],
   images: [
     { src: ChildDiagnosisOne, alt: "Skin treatment consultation" },

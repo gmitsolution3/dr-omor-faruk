@@ -6,11 +6,10 @@ export const headerData = {
     link: "/",
   },
   navItems: [
-    { to: "banner", name: "Home" },
+    { to: "/", name: "Home" },
     { to: "banner", name: "About" },
+    { to: "book-appointment", name: "Book Appointment" },
     { to: "services", name: "Services" },
-    { to: "faq", name: "Faq" },
-    { to: "blog", name: "Blog" },
     { to: "gallery", name: "Gallery" },
     { to: "contact", name: "Contact" },
   ],
@@ -18,12 +17,15 @@ export const headerData = {
     {
       icon: MapPin,
       title: "লোকেশন",
-      description: "কুর্মিটলা জেনারেল হসপিটাল, ঢাকা",
+      description: ["কুর্মিটলা জেনারেল হসপিটাল, ঢাকা"],
     },
     {
       icon: Phone,
       title: "সিরিয়ালের জন্য",
-      description: "+8801339-511108",
+      description: [
+        "+8801339-511108",
+        "+8801992222555",
+      ],
       link: "tel:+8801339511108",
     },
   ],

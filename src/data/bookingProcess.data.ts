@@ -25,7 +25,7 @@ export const bookingProcessData = {
     {
       number: "02",
       icon: Users,
-      title: "অ্যাপয়েন্টমেন্ট বুকিং রিসিট করা হবে",
+      title: "অ্যাপয়েন্টমেন্ট বুকিং ফর্ম পুরন করুন",
     },
     {
       number: "03",
@@ -35,7 +35,7 @@ export const bookingProcessData = {
     {
       number: "04",
       icon: Syringe,
-      title: "সরাসরি চেন্বরে এসে সেবা নিন",
+      title: "সরাসরি চেম্বারে এসে বা অনলাইনে সেবা নিন",
     },
   ],
   images: [TreatmentImage, FacialImage],
@@ -45,12 +45,12 @@ export const bookingProcessData = {
       label: "রোগী দেখার সময়",
       icon: Clock,
       iconSize: 18,
-      time: "প্রতিদিন সকাল ১১টা থেকে রাত ১১টা",
+      time: "প্রতিদিন সকাল ৭টা থেকে রাত ৯টা",
       textColor: "#A4AEBE",
     },
     phone: {
       label: "সিরিয়ালের জন্য",
-      number: "01339511108",
+      number: ["01339511108", "01992222555", "01992222777"],
       buttonBg: "bg-primary",
       iconSize: 24,
     },

@@ -5,9 +5,12 @@ import HeaderSideMenu from "./HeaderSideMenu";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { headerData } from "@/data/header.data";
+import { useLocation } from "react-router";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const { pathname } = useLocation();
 
   return (
     <header className="py-4 lg:py-8">
@@ -47,12 +50,14 @@ export default function Header() {
               </span>
               <div>
                 <h3 className="font-medium">{info.title}</h3>
-                <p className="text-[#525766] text-sm">
-                  {info.link ? (
-                    <a href={info.link}>{info.description}</a>
-                  ) : (
-                    info.description
-                  )}
+                <p className="text-[#525766] text-sm flex flex-col">
+                  {info.link
+                    ? info.description.map((item) => (
+                        <a href={`tel:${item}`}>{item}</a>
+                      ))
+                    : info.description.map((item) => (
+                        <span>{item}</span>
+                      ))}
                 </p>
               </div>
             </div>
@@ -76,26 +81,28 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:block mt-8 border-t border-[#EAEAEA] pt-6">
-          <div className="flex items-center justify-between">
-            <ul className="flex items-center justify-start space-x-8 uppercase">
-              {headerData.navItems.map((item, idx) => (
-                <li key={idx}>
-                  <MenuLink
-                    to={item.to}
-                    className="text-[#423D96] hover:text-primary font-medium transition-colors text-sm"
-                  >
-                    {item.name}
-                  </MenuLink>
-                </li>
-              ))}
-            </ul>
+        {pathname !== "/doctor-profile" && (
+          <nav className="hidden lg:block mt-8 border-t border-[#EAEAEA] pt-6">
+            <div className="flex items-center justify-between">
+              <ul className="flex items-center justify-start space-x-8 uppercase">
+                {headerData.navItems.map((item, idx) => (
+                  <li key={idx}>
+                    <MenuLink
+                      to={item.to}
+                      className="text-[#423D96] hover:text-primary font-medium transition-colors text-sm"
+                    >
+                      {item.name}
+                    </MenuLink>
+                  </li>
+                ))}
+              </ul>
 
-            <div>
-              <HeaderSideMenu />
+              <div>
+                <HeaderSideMenu />
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
+        )}
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (

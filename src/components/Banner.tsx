@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import TypingText from "@/components/ui/typing-text";
 import { bannerData } from "@/data/banner.data";
 import type { TButton } from "@/type";
+import { Link } from 'react-router';
 
 export default function Banner() {
   return (
@@ -42,8 +43,11 @@ export default function Banner() {
                 <Button
                   variant={bannerData.button.variant as TButton}
                   className={bannerData.button.className}
+                  asChild
                 >
-                  {bannerData.button.text} <ArrowRight size={18} />
+                  <Link to="/doctor-profile">
+                    {bannerData.button.text} <ArrowRight size={18} />
+                  </Link>
                 </Button>
               </div>
             </div>

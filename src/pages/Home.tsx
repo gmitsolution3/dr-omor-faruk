@@ -19,7 +19,6 @@ const CallToAction = lazy(
 const BookingProcess = lazy(
   () => import("./../components/BookingProcess")
 );
-// import BlogSection from "./../components/BlogSection";
 
 export default function Home() {
   return (
@@ -31,7 +30,6 @@ export default function Home() {
       <StatsAndServicesSection />
       <CallToAction />
       <BookingProcess />
-      {/* <BlogSection /> */}
     </>
   );
 }

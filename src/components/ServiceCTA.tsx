@@ -2,6 +2,7 @@ import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import type { TButton } from "@/type";
 import { servicesData } from "@/data/serviceCTA.data";
+import { Link } from "react-router";
 
 export default function ServicesCTA() {
   return (
@@ -94,8 +95,11 @@ export default function ServicesCTA() {
               <Button
                 variant={servicesData.button.variant as TButton}
                 className={servicesData.button.className}
+                asChild
               >
-                {servicesData.button.text}
+                <Link to="/doctor-profile">
+                  {servicesData.button.text}
+                </Link>
               </Button>
             </div>
           </div>

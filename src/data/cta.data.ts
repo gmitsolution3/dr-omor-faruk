@@ -4,7 +4,7 @@ export const callToActionData = {
   heading:
     "শিশুদের বিভিন্ন সমসা সমাধানের জন্য যোগায়োগ করুন",
   phoneButton: {
-    number: "+8801974-896998",
+    number: "+8801339511108",
     bgColor: "bg-primary",
     textColor: "text-white",
     hoverBg: "bg-primary/60",

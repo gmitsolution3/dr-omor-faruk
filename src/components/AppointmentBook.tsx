@@ -37,6 +37,7 @@ export default function AppointmentBook() {
 
   return (
     <div
+    id="book-appointment"
       className={`bg-[${appointmentData.bgColor}] flex items-center justify-center px-4 py-12 md:py-20 lg:py-[150px]`}
     >
       <div className="container mx-auto">
