@@ -1,11 +1,6 @@
-import {
-  FileText,
-  Users,
-  UserCheck,
-  Syringe,
-} from "lucide-react";
-import FacialImage from "@/assets/facial.jpg";
-import TreatmentImage from "@/assets/treatment.jpg";
+import { FileText, Users, UserCheck, Syringe } from "lucide-react";
+import Orsho from "@/assets/orsho.webp";
+import Piles from "@/assets/piles-img.webp";
 
 export const bookingProcessData = {
   id: "blog",
@@ -25,7 +20,7 @@ export const bookingProcessData = {
     {
       number: "02",
       icon: <Users size={32} className="text-white" />,
-      title: "অ্যাপয়েন্টমেন্ট বুকিং রিসিট করা হবে",
+      title: "অ্যাপয়েন্টমেন্ট বুকিং ফর্ম পুরন করুন",
     },
     {
       number: "03",
@@ -41,12 +36,12 @@ export const bookingProcessData = {
 
   images: [
     {
-      src: TreatmentImage,
+      src: Orsho,
       alt: "Skin treatment",
       className: "rounded-tl-2xl",
     },
     {
-      src: FacialImage,
+      src: Piles,
       alt: "Facial treatment",
       className: "rounded-tr-2xl",
     },

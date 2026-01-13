@@ -1,17 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import TypingText from "@/components/ui/typing-text";
 import { bannerData } from "@/data/bannerData";
+import { Link } from "react-router";
 
 export default function Banner() {
-  const {
-    id,
-    backgroundClass,
-    doctor,
-    typingText,
-    description,
-    button,
-  } = bannerData;
+  const { id, backgroundClass, doctor, description, button } =
+    bannerData;
 
   return (
     <div id={id} className={`${backgroundClass} py-12 lg:py-0`}>
@@ -22,17 +16,6 @@ export default function Banner() {
             <div className="max-w-2xl w-full mx-auto lg:mx-0 text-center lg:text-left">
               <h3 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white mb-4 leading-tight">
                 {doctor.name}{" "}
-                <TypingText
-                  text={typingText.texts}
-                  typingSpeed={typingText.typingSpeed}
-                  pauseDuration={typingText.pauseDuration}
-                  showCursor={typingText.showCursor}
-                  cursorCharacter={typingText.cursorCharacter}
-                  cursorClassName={typingText.cursorClassName}
-                  className="text-3xl md:text-4xl lg:text-5xl font-semibold inline-block"
-                  textColors={typingText.textColors}
-                  variableSpeed={typingText.variableSpeed}
-                />
               </h3>
 
               <p className="text-[#ffffff] mb-6 font-light leading-relaxed text-sm md:text-base max-w-120">
@@ -43,8 +26,11 @@ export default function Banner() {
                 <Button
                   variant="primary"
                   className="bg-white hover:bg-white text-primary transition-all duration-300 flex items-center gap-2"
+                  asChild
                 >
-                  {button.text} <ArrowRight size={18} />
+                  <Link to="/doctor-profile">
+                    {button.text} <ArrowRight size={18} />
+                  </Link>
                 </Button>
               </div>
             </div>

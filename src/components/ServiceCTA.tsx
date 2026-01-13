@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Button } from "./ui/button";
 import { servicesCTAData } from "@/data/serviceCTAData";
+import { Link } from "react-router";
 
 export default function ServicesCTA() {
   const {
@@ -95,8 +96,9 @@ export default function ServicesCTA() {
               <Button
                 variant="primary"
                 className="bg-primary hover:hover:bg-[#10172E]"
+                asChild
               >
-                {cta.text}
+                <Link to="/doctor-profile">{cta.text}</Link>
               </Button>
             </div>
           </div>

@@ -1,10 +1,9 @@
-import { Button } from "./ui/button";
 import { statsAndServicesData } from "@/data/statAndServiceData";
 
 export default function StatsAndServicesSection() {
   const { id, sectionClass, stats, servicesSection } =
     statsAndServicesData;
-  const { subtitle, heading, cta, servicesGrid } = servicesSection;
+  const { subtitle, heading, servicesGrid } = servicesSection;
 
   return (
     <section id={id} className={sectionClass}>
@@ -48,13 +47,6 @@ export default function StatsAndServicesSection() {
                 {heading}
               </h2>
             </div>
-
-            <Button
-              variant="primary"
-              className="bg-primary hover:bg-[#10172E]"
-            >
-              {cta.text}
-            </Button>
           </div>
 
           {/* Services Grid */}

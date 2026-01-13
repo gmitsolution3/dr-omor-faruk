@@ -1,10 +1,9 @@
 import { Users, Award, Syringe, UserCheck } from "lucide-react";
-import FacePRCImage from "@/assets/faceprc.jpg";
-import HairPRCImage from "@/assets/hairprc.jpg";
-import Botox from "@/assets/botox.jpg";
-import Filler from "@/assets/filler.jpg";
 
-// import NasalPolypas from "@/assets/nasal-polyps.jpg"
+import NasalPolypas from "@/assets/nasal-polyps.jpg";
+import OrshoImage from "@/assets/orsho-service.jpeg";
+import PilesImage from "@/assets/piles-service.jpg";
+import GejPicture from '@/assets/gej.jpg';
 
 export const statsAndServicesData = {
   id: "gallery",
@@ -40,10 +39,10 @@ export const statsAndServicesData = {
       text: "সব সার্ভিসেস",
     },
     servicesGrid: [
-      { image: FacePRCImage, title: "নাকের পলিপাস" },
-      { image: HairPRCImage, title: "অর্শ" },
-      { image: Botox, title: "গেজ" },
-      { image: Filler, title: "পাইলস" },
+      { image: NasalPolypas, title: "নাকের পলিপাস" },
+      { image: OrshoImage, title: "অর্শ" },
+      { image: GejPicture, title: "গেজ" },
+      { image: PilesImage, title: "পাইলস" },
     ],
   },
 };
