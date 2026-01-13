@@ -5,7 +5,7 @@ export const bannerData = {
   backgroundClass: "bg-primary",
 
   doctor: {
-    name: "ডাঃ মোঃ ওমর ফারুক",
+    name: "চিকিৎসক মোঃ ওমর ফারুক",
     image: DoctorImage,
     imageAlt: "Dr. Omor Faruk",
   },

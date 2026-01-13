@@ -5,6 +5,7 @@ import HeaderSideMenu from "./HeaderSideMenu";
 import { Button } from "../ui/button";
 import { useState } from "react";
 import { headerData } from "./../../data/headerData";
+import Logo from "@/assets/logo.png";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -22,7 +23,7 @@ export default function Header() {
               to={logo.link}
               className="font-bold text-xl lg:text-2xl"
             >
-              {logo.text}
+              <img src={Logo} alt="Logo" className="w-20" />
             </Link>
 
             {/* Mobile Menu Toggle */}
