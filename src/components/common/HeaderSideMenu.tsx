@@ -1,4 +1,4 @@
-import { Menu } from "lucide-react";
+import { Menu, Phone, Clock, Hospital, Brain } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -7,7 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Clock, Phone } from "lucide-react";
+import DoctorImage from "@/assets/dr-omor-faruk.jpg";
+import { sideMenuData } from "@/data/sidemenuData";
 
 export default function HeaderSideMenu() {
   return (
@@ -15,48 +16,116 @@ export default function HeaderSideMenu() {
       <SheetTrigger>
         <Menu />
       </SheetTrigger>
-      <SheetContent className="bg-primary text-white border-l-0">
+
+      <SheetContent className="bg-[#10172E] text-white border-l-0 overflow-y-auto">
         <SheetHeader>
-          <SheetTitle className="text-white text-3xl mt-12">
-            ডাঃ চৌধুরী ফারহানা তিন্নি
-            <p className="mt-5 text-lg font-light">ডার্মাটোসার্জন</p>
-          </SheetTitle>
+          {/* Doctor Profile */}
+          <div className="flex flex-col items-center text-center mt-8">
+            <img
+              src={DoctorImage}
+              alt={sideMenuData.doctor.name}
+              className="w-28 h-36 object-cover rounded-xl shadow mb-4"
+            />
+
+            <SheetTitle className="text-white text-2xl">
+              {sideMenuData.doctor.name}
+            </SheetTitle>
+
+            <p className="mt-2 text-sm font-light text-gray-300">
+              {sideMenuData.doctor.title}
+            </p>
+          </div>
+
           <SheetDescription>
-            <div className="space-y-4 mt-4">
+            <div className="space-y-6 mt-8">
+              {/* Centers */}
               <div>
-                <h3 className="font-bold mb-2 text-white">
-                  পপুলার ডায়াগনস্টিক সেন্টার
+                <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
+                  <Hospital className="w-4 h-4 text-primary" />
+                  চেম্বার
                 </h3>
-                <p className="text-sm text-gray-300">
-                  রুম নং: ৫১৩ বি ব্লক, ২০/বি, কে.বি. ফজলুল কাদের রোড,
-                  পাঁচলাইশ, চট্টগ্রাম।
-                </p>
-                <p className="text-xs text-gray-300 mt-1">
-                  (চট্টগ্রাম মেডিকেল কলেজ ও হাসপাতালের পূর্ব গেইটের
-                  পাশে)
-                </p>
+
+                <div className="space-y-3">
+                  {sideMenuData.centers.map((center, idx) => (
+                    <div key={idx}>
+                      <p className="font-medium text-sm">
+                        {center.name}
+                      </p>
+                      <p className="text-xs text-gray-300">
+                        {center.address}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
+
+              {/* Phone */}
               <div>
-                <h3 className="font-bold text-white mb-2">
-                  Surecell Medical, Chattogram
+                <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-primary" />
+                  যোগাযোগ
                 </h3>
+
+                <div className="text-sm text-gray-300 flex flex-col gap-1">
+                  {sideMenuData.phone.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Timing */}
+              <div>
+                <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-primary" />
+                  রোগী দেখার সময়
+                </h3>
+
                 <p className="text-sm text-gray-300">
-                  আল-নূর বদরুন সেন্টার (৪র্থ তলা) ১৪৮৬-১৬৭২, ও.আর.
-                  নিজাম রোড প্রবর্তক মোড়, চট্টগ্রাম।
+                  {sideMenuData.timing}
                 </p>
               </div>
-              <div className="flex items-center gap-x-2">
-                <h3 className="font-bold text-white">
-                  <Phone />
-                </h3>
-                <p className="text-sm text-gray-300">01974-896998</p>
-              </div>
-              <div className="flex items-center gap-x-2">
-                <h3 className="font-bold text-white">
-                  <Clock />
+
+              {/* Appointment */}
+              <div>
+                <h3 className="font-semibold text-white mb-3">
+                  🕐 অ্যাপয়েন্টমেন্ট সময়
                 </h3>
                 <p className="text-sm text-gray-300">
-                  প্রতিদিন বিকাল ৪টা থেকে সন্ধ্যা ৭টা পর্যন্ত
+                  {sideMenuData.appointment}
+                </p>
+              </div>
+
+              {/* Online */}
+              <div>
+                <h3 className="font-semibold text-white mb-3">
+                  💻 অনলাইন কনসালটেশন
+                </h3>
+                <p className="text-sm text-gray-300">
+                  ফোনে যোগাযোগ করে সিরিয়াল নিন
+                </p>
+              </div>
+
+              {/* Specialties */}
+              <div>
+                <h3 className="font-semibold text-white mb-3 flex items-center gap-2">
+                  <Brain className="w-4 h-4 text-primary" />
+                  বিশেষ দক্ষতা
+                </h3>
+
+                <ul className="text-sm text-gray-300 list-disc pl-5 space-y-1">
+                  {sideMenuData.specialties.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* CTA */}
+              <div className="pt-4 border-t border-white/10">
+                <p className="text-center text-sm text-gray-300 mb-2">
+                  অ্যাপয়েন্টমেন্টের জন্য কল করুন
+                </p>
+                <p className="text-center font-semibold text-lg text-white">
+                  {sideMenuData.phone[0]}
                 </p>
               </div>
             </div>
