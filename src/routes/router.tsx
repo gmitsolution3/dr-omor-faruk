@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/doctor-profile",
-        element: <DoctorProfile />,
+        element: <DoctorProfile />, 
       },
     ],
   },
