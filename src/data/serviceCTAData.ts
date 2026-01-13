@@ -1,6 +1,3 @@
-import FacialImage from "@/assets/facial.jpg";
-import MakeupImage from "@/assets/makeup.jpg";
-import TreatmentImage from "@/assets/treatment.jpg";
 import DoctorImage from "@/assets/dr-omor-faruk.jpg";
 
 import PolypasImage from "@/assets/polypas.webp";
