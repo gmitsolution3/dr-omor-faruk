@@ -121,7 +121,9 @@ export default function Footer() {
                   size={20}
                   className="text-yellow-400 flex-shrink-0 mt-1"
                 />
-                <p className="leading-relaxed">{footerData.contact.address}</p>
+                <p className="leading-relaxed">
+                  {footerData.contact.address}
+                </p>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={20} className="text-yellow-400" />
@@ -146,7 +148,9 @@ export default function Footer() {
                 className="text-yellow-400 flex-shrink-0"
               />
               <div>
-                <p className="font-semibold">{footerData.hours.timing}</p>
+                <p className="font-semibold">
+                  {footerData.hours.timing}
+                </p>
               </div>
             </div>
           </div>
@@ -157,7 +161,11 @@ export default function Footer() {
       <div className="border-t border-gray-700">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-400 text-sm">
-            <p>{footerData.bottom.designer}</p>
+            <p>
+              <a href="https://www.gmitsolution.net" target="_blank">
+                {footerData.bottom.designer}
+              </a>
+            </p>
             <p>{footerData.bottom.copyright}</p>
           </div>
         </div>
